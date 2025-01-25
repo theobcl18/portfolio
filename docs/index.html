@@ -1,30 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil | Mon Portfolio</title>
+    <title>Mon Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1>Mon Portfolio</h1>
-        <nav>
-            <a href="index.html">Accueil</a>
-            <a href="projects.html">Projets</a>
-            <a href="about.html">À propos</a>
-            <a href="contact.html">Contact</a>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&amp;display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Portfolio de Théo Bucaille</title>
+    <header <div="" class="entetecontainer">
+        <div class="profile-container">
+            <h1>Clara Lemétayer</h1>
+        </div>
+        <nav class="buttons">
+            <a href="https://www.linkedin.com/in/th%C3%A9o-bucaille/" target="_blank" class="button">LinkedIn</a>
+            <a href="https://github.com/claralmt35/portefolio/blob/main/CV.webp?raw=true" target="_blank" class="button">CV</a>
+            <a href="mailto:gtbe189@gmail.com" target="_blank" class="button">Me contacter</a>
         </nav>
-    </header>
+    
+</header>
 
-    <main>
-        <section class="hero">
-            <h2>Bienvenue !</h2>
-            <p>Découvrez mes projets en cartographie et infographie.</p>
-            <a href="projects.html" class="btn">Voir mes projets</a>
-        </section>
-    </main>
+<main>
+    <section class="intro">
+      <h2>Bienvenue sur mon portfolio !</h2>
+          <p>Je m'appelle Théo Bucaille et je suis actuellement en licence professionnelle Cartographie, topographie et systèmes d'information géographique
+            Parcours Systèmes d'information géographique : diagnostic et aménagement des territoires.
+            Portant un intérêt pour les SIG et la géographie en générale, je vous invite à découvrir quelques-unes de mes réalisations et des réalisations de groupe ci-dessous.</p>
+    </section>
 
+    <!-- Selection Tags for Work Categories -->
+    <div class="tag-selection">
+        <p class="docs__tag docs__tag--grey">Tous mes travaux</p>
+        <p class="docs__tag docs__tag--grey">Cartographies</p>
+        <p class="docs__tag docs__tag--grey">Infographies et posters</p>
+        <p class="docs__tag docs__tag--grey">Diagnostic de territoire</p>
+        <p class="docs__tag docs__tag--grey">Terrain et techniques d'enquêtes : Un lien étroit entre logement étudiant et situation familiale ?</p>
+        <p class="docs__tag docs__tag--grey">Terrain et techniques d'enquêtes : Le logement étudiant</p>
+    </div>
+  
+<!-- Modal for Image Display -->
+<div class="modal" id="imageModal">
+<div class="modal-content">
+    <span class="close">×</span>
+    <img id="modalImage" src="" alt="Document Image">
+    <p id="modalText" class="modal-text"></p>
+</div>
+</div>
+  
+    <!-- Container for dynamically displayed work -->
+    <div class="docs">
+        <div class="docs__item">
+            <img src="">
+            <div>
+                <h3></h3>
+            </div>
+            <div class="docs__tags">
+                
+            <p class="docs__tag docs__tag--green">Infographies et posters</p>
+        
+            </div>
+        
+            </div>
+        </div>
+    </div>
+</main>
+<script src="script.js"></script>
+<div class="modal">
+    <div class="modal-content">
+      <span class="close">×</span>
+      <img id="modal-image" src="" alt="Document Image">
+      <p id="modal-text" class="modal-text"></p>
+    </div>
+  </div>
+  <script src="./script.js"></script>
     <footer>
         <p>&copy; 2025 Mon Portfolio</p>
     </footer>

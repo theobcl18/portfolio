@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background: #333;
+    background-color: #6db7ec;
     color: #fff;
     padding: 1rem;
     text-align: center;
@@ -67,8 +67,8 @@ footer {
 /* Projects */
 .projects-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
 .project-card {
