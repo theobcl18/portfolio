@@ -1,85 +1,136 @@
+
 <!DOCTYPE html>
 <html lang="en"> 
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Portfolio</title>
-    <link rel="stylesheet" href="docs/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&amp;display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+
     <title>Portfolio de Théo Bucaille</title>
-    <header <div="" class="entetecontainer">
+
+    <header class="entetecontainer">
+
         <div class="profile-container">
             <h1>Théo Bucaille</h1>
         </div>
-        <nav class="buttons">
+
+        <nav class="nav-links">
             <a href="https://www.linkedin.com/in/th%C3%A9o-bucaille/" target="_blank" class="button">LinkedIn</a>
-            <a href="" target="_blank" class="button">CV</a>
-            <a href="mailto:gtbe189@gmail.com" target="_blank" class="button">Me contacter</a>
+            <a href="img/CV Stage spontanée Théo.pdf" target="_blank">À propos</a>
+            <a href="mailto:gtbe189@gmail.com" target="_blank" class="btn"> Me contacter </a>
         </nav>
     
     </header>
 
-<main>
-    <section class="intro">
-      <h2>Bienvenue sur mon portfolio !</h2>
-          <p>Je m'appelle Théo Bucaille et je suis actuellement en licence professionnelle Cartographie, topographie et systèmes d'information géographique
-            Parcours Systèmes d'information géographique : diagnostic et aménagement des territoires.
-            Portant un intérêt pour les SIG et la géographie en générale, je vous invite à découvrir quelques-unes de mes réalisations et des réalisations de groupe ci-dessous.</p>
-    </section>
+    <main>
+        <section1 class="intro">
+            <h2>Bienvenue sur mon portfolio !</h2>
+        </section1>
 
-    <!-- Selection Tags for Work Categories -->
-    <div class="tag-selection">
-        <p class="docs__tag docs__tag--grey">Tous mes travaux</p>
-        <p class="docs__tag docs__tag--grey">Cartographies</p>
-        <p class="docs__tag docs__tag--grey">Infographies et posters</p>
-        <p class="docs__tag docs__tag--grey">Diagnostic de territoire</p>
-        <p class="docs__tag docs__tag--grey">Terrain et techniques d'enquêtes : Un lien étroit entre logement étudiant et situation familiale ?</p>
-        <p class="docs__tag docs__tag--grey">Terrain et techniques d'enquêtes : Le logement étudiant</p>
-    </div>
+        <section2 class="intro">
+            <p>Je m'appelle Théo Bucaille et je suis actuellement en licence professionnelle Cartographie, topographie et systèmes d'information géographique
+            Parcours Systèmes d'information géographique : diagnostic et aménagement des territoires.
+            Portant un intérêt pour les SIG et la géographie en générale, je vous invite à découvrir quelques-unes de mes réalisations ci-dessous.</p>
+        </section2>
   
-<!-- Modal for Image Display -->
-<div class="modal" id="imageModal">
-<div class="modal-content">
-    <span class="close">×</span>
-    <img id="modalImage" src="" alt="Document Image">
-    <p id="modalText" class="modal-text"></p>
-</div>
-</div>
-  
+
     <!-- Container for dynamically displayed work -->
-    <div class="docs">
-        <div class="docs__item">
-            <img src="">
-            <div>
-                <h3></h3>
+    <section class="portfolio">
+        <h2 class="petit-texte"> Mes Productions</h2>
+
+            <!-- Selection Tags for Work Categories REMETTRE EN LONGUEUR, pas que "diagnostic de territoire soit en 2 lignes"-->
+        <div class="tag-selection">
+            <p class="docs__tag docs__tag--grey">Tous mes travaux</p>
+            <p class="docs__tag docs__tag--grey">Cartographies</p>
+            <p class="docs__tag docs__tag--grey">Infographies et posters</p>
+            <p class="docs__tag docs__tag--grey">Diagnostic de territoire</p>
+            <p class="docs__tag docs__tag--grey">Terrain et techniques d'enquêtes</p>
+        </div>
+
+        <div class="portfolio-items">
+
+            <!-- Premier projet -->
+            <div class="portfolio-item">
+                <div class="carousel" id="carousel-1" data-index="0">
+                    <!-- Ajoute plusieurs images que possible pour chaque projet -->
+                    <img src="img/densite_haies_cingal_suisse_Normande.png" alt="Projet 1 - Aspect 1" class="carousel-image active">
+                    <img src="img/densite_haies_calvados.png" alt="Projet 1 - Aspect 2" class="carousel-image">
+                    <!-- Autres images -->
+                    <a href="img/RenduV8paysage_CC_07_02_.pdf" target="_blank"></a>
+                    <img src="img/densite_haies_cingal_suisse_Normande.png"
+                    width="300">
+                    <button class="carousel-arrow left">❮</button>
+                    <button class="carousel-arrow right">❯</button>
+                </div>
+
+                <div>
+                <h3> Carte de densité de haies</h3>
+                </div>
+
+                <p> Dossier dans l'UE SIG et CARTOGRAPHIE </p>
+
+                <div class="docs__tags">
+                <p class="docs__tag docs__tag--green">Cartographies</p>
+                </div>
+
             </div>
-            <div class="docs__tags">
-                
-            <p class="docs__tag docs__tag--green">Infographies et posters</p>
-        
-            </div>
-        
+             <!-- deuxieme projet -->
+            <div class="portfolio-item">
+                <div class="carousel" id="carousel-2"> data-index="0">
+                    <!-- Ajoute autant d'images que nécessaire pour chaque projet -->
+                    <img src="img/obstruction_route.png" alt="Projet 2 - Aspect 1" class="carousel-image active">
+                    <img src="7.jpg" alt="Projet 2 - Aspect 2" class="carousel-image">
+                    <!-- Autres images -->
+                    <button class="carousel-arrow left">❮</button>
+                    <button class="carousel-arrow right">❯</button>
+                </div>
+                <h3>Carte obstruction des routes dans la commune de Clécy</h3>
+                <p>La consigne était de ....</p>
+
+                <div class="docs__tags">
+                <p class="docs__tag docs__tag--green">Cartographies</p>
+                </div>
+
+            <!-- troisieme projet -->
+            <div class="portfolio-item">
+                <div class="carousel" id="carousel-2"> data-index="0">
+                    <!-- Ajoute autant d'images que nécessaire pour chaque projet -->
+                    <img src="img/T.Bucaille et M.Portier - Dossier 4 pages.pdf" alt="Projet 3 - Aspect 1" class="carousel-image active">
+                    <!-- Autres images -->
+                </div>
+                    <h3> Un lien étroit entre logement étudiant et situation familiale ?  </h3>
+                    <p> Passation de questionnaires et analyse</p>
+    
+                    <div class="docs__tags">
+                    <p class="docs__tag docs__tag--green">Terrain et techniques d'enquêtes</p>
+                    </div>
+
             </div>
         </div>
-    </div>
-</main>
-<script src="script.js"></script>
-<div class="modal">
-    <div class="modal-content">
-      <span class="close">×</span>
-      <img id="modal-image" src="" alt="Document Image">
-      <p id="modal-text" class="modal-text"></p>
-    </div>
-  </div>
-  <script src="./script.js"></script>
-    <footer>
-        <p>&copy; 2025 Mon Portfolio</p>
-    </footer>
+    </section>
+
+    <script src="carrousel.js"></script>
+
+    </main>
+    <script src="script.js"></script>
+
+    <script src="./script.js"></script>
+
 </body>
+
+    <footer>
+        <p>© 2025 Théo Bucaille. Tous droits réservés.</p>
+    </footer>
+
 </html>
