@@ -48,33 +48,34 @@ carousels.forEach((carousel, index) => {
 
 
 
-
-
 const docs = [
     {
         title: "Carte de densité de haies",
         description:"Dossier cartographique, UE SIG et CARTOGRAPHIE",
-        url: "https://github.com/theobcl18/Portfolio/blob/main/docs/densit%C3%A9_de_haies_Cingal_Suisse_Normande_carte_finale.png?raw=true",
+        url: "https://github.com/theobcl18/portfolio/blob/main/docs/RenduV8paysage_CC_07_02_.pdf",
         tags: ["Cartographies"]
     },
     {title: "Carte de densité de haies",
         description: "Dossier cartographique, UE SIG et CARTOGRAPHIE",
-        url: "https://github.com/claralmt35/portefolio/blob/main/Anamorphose.webp?raw=true",
+        url: "https://github.com/theobcl18/portfolio/blob/main/docs/rendu_cc_geoprocessing_mm.pdf",
         tags: ["Cartographies"]
     }
 ];
         // Ajoutez d'autres objets de documents ici si nécessaire
 
 
-const docContainer = document.querySelector(".docs");
+
+        const docContainer = document.querySelector(".docs");
 
 const tagColors = {
-    'Tous mes travaux': 'grey',
-    "Cartographies": "blue",
+    "Tous mes travaux": "grey",
+    Cartographies: "blue",
     "Infographies et posters": "green",
-    "Diagnostic de territoire": "red",
-    "Terrain et techniques d'enquêtes": "black"
-},
+    "Terrain et techniques d'enquêtes": "red",
+    "Diagnostic de territoire": "black",
+    Code: "yellow",
+    "Télédétection": "pink"
+};
 
 const docSelection = document.querySelector(".tag-selection");
 
@@ -166,7 +167,7 @@ function printDocs(docArray) {
         });
 
         const html = `
-            <div class="docs__item">
+            <div class="portfolio-item">
                 <img src="${doc.url}" alt="${doc.title}" data-title="${doc.title}" data-description="${doc.description}">
                 <div>
                     <h3>${doc.title}</h3>
@@ -181,7 +182,7 @@ function printDocs(docArray) {
     });
 
     // Ajout d'un gestionnaire d'événements pour les images
-    const docImages = document.querySelectorAll(".docs__item img");
+    const docImages = document.querySelectorAll(".portfolio-item img");
     docImages.forEach((img) => {
         img.addEventListener("click", (e) => {
             const target = e.target;
