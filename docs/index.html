@@ -13,9 +13,7 @@
 <body>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&amp;display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
 
     <title>Portfolio de Théo Bucaille</title>
 
@@ -39,8 +37,7 @@
         </section1>
 
         <section2 class="intro">
-            <p>Je m'appelle Théo Bucaille et je suis actuellement en licence professionnelle Cartographie, topographie et systèmes d'information géographique
-            Parcours Systèmes d'information géographique : diagnostic et aménagement des territoires.
+            <p>Je m'appelle Théo Bucaille et je suis actuellement en licence professionnelle Systèmes d'information géographique et Diagnostic et Aménagement des Territoires.
             Portant un intérêt pour les SIG et la géographie en générale, je vous invite à découvrir quelques-unes de mes réalisations ci-dessous.</p>
         </section2>
   
@@ -58,65 +55,89 @@
             <p class="docs__tag docs__tag--grey">Terrain et techniques d'enquêtes</p>
         </div>
 
+        <div class="modal" id="imageModal">
+            <div class="modal-content">
+                <span class="close">×</span>
+                <img id="modalImage" src="" alt="Document Image">
+                <p id="modalText" class="modal-text"></p>
+            </div>
+        </div>
+
         <div class="portfolio-items">
 
             <!-- Premier projet -->
             <div class="portfolio-item">
                 <div class="carousel" id="carousel-1" data-index="0">
                     <!-- Ajoute plusieurs images que possible pour chaque projet -->
-                    <img src="img/densite_haies_cingal_suisse_Normande.png" alt="Projet 1 - Aspect 1" class="carousel-image active">
-                    <img src="img/densite_haies_calvados.png" alt="Projet 1 - Aspect 2" class="carousel-image">
+                    <img src="img/densite_haies_cingal_suisse_Normande.png" alt="Projet 1 - Aspect 1" class="carousel-image">
+                    <img src="img/densite_haies_calvados.png" alt="Projet 1 - Aspect 2" class="carousel-image active">
+                    <img src="img/obstruction_route.png" alt="Projet 1 - Aspect 3" class="carousel-image">
                     <!-- Autres images -->
-                    <a href="img/RenduV8paysage_CC_07_02_.pdf" target="_blank"></a>
-                    <img src="img/densite_haies_cingal_suisse_Normande.png"
-                    width="300">
+                    <a href="https://github.com/theobcl18/portfolio/blob/main/docs/RenduV8paysage_CC_07_02_.pdf" target="_blank"></a>
                     <button class="carousel-arrow left">❮</button>
                     <button class="carousel-arrow right">❯</button>
                 </div>
-
                 <div>
                 <h3> Carte de densité de haies</h3>
                 </div>
-
-                <p> Dossier dans l'UE SIG et CARTOGRAPHIE </p>
-
                 <div class="docs__tags">
-                <p class="docs__tag docs__tag--green">Cartographies</p>
+                <p class="docs__tag docs__tag--blue">Cartographies</p>
                 </div>
-
             </div>
-             <!-- deuxieme projet -->
-            <div class="portfolio-item">
-                <div class="carousel" id="carousel-2"> data-index="0">
-                    <!-- Ajoute autant d'images que nécessaire pour chaque projet -->
-                    <img src="img/obstruction_route.png" alt="Projet 2 - Aspect 1" class="carousel-image active">
-                    <img src="7.jpg" alt="Projet 2 - Aspect 2" class="carousel-image">
-                    <!-- Autres images -->
+
+            <!-- deuxième projet -->
+            <div class="portfolio-item"></div>
+                <div class="carousel" id="carousel-2" data-index="0">
+                    <!-- Ajoute plusieurs images que possible pour chaque projet -->
+                    <img src="img/densite_ha_par_iris.png" alt="Projet 2 - Aspect 1" class="carousel-image active">
+                    <img src="img/pop_batiment.png" alt="Projet 2 - Aspect 2" class="carousel-image">
+                    <img src="img/espace_vert_dans_paris_et_population_isochrome.png" alt="Projet 2 - Aspect 3" class="carousel-image">
                     <button class="carousel-arrow left">❮</button>
                     <button class="carousel-arrow right">❯</button>
                 </div>
-                <h3>Carte obstruction des routes dans la commune de Clécy</h3>
-                <p>La consigne était de ....</p>
-
+                <div>
+                <h3> Carte de densité de population par IRIS à Paris</h3>
+                </div>
                 <div class="docs__tags">
-                <p class="docs__tag docs__tag--green">Cartographies</p>
+                <p class="docs__tag docs__tag--blue">Cartographies</p>
                 </div>
 
-            <!-- troisieme projet -->
+            
+            <!-- troisème projet -->
             <div class="portfolio-item">
-                <div class="carousel" id="carousel-2"> data-index="0">
+                <div class="carousel" id="carousel-3"> 
                     <!-- Ajoute autant d'images que nécessaire pour chaque projet -->
-                    <img src="img/T.Bucaille et M.Portier - Dossier 4 pages.pdf" alt="Projet 3 - Aspect 1" class="carousel-image active">
+                    <img src="img/localisation_cc_de_comparaison.png" alt="Projet 3 - Aspect 1" class="carousel-image active">
+                    <img src="img/refonte_carte_ivV2.png" alt="Projet 3 - Aspect 2" class="carousel-image">
+                    <img src="img/carte_propriétaire_refonte.png" alt="Projet 3 - Aspect 3" class="carousel-image">
+                    <img src="img/carte_ratio_cadre_ouvrier_refonte.png" alt="Projet 3 - Aspect 4" class="carousel-image">
+                    <img src="img/carte revenu médian refonte.png" alt="Projet 3 - Aspect 5" class="carousel-image">
+                    <button class="carousel-arrow left">❮</button>
+                    <button class="carousel-arrow right">❯</button>
+                    <!-- Autres images -->
+                </div>
+                <div>
+                <h3> diag </h3>
+                </div>
+                <div class="docs__tags">
+                <p class="docs__tag docs__tag--black">Diagnostic de territoire</p>
+                </div>
+            </div>
+
+            <!-- quatrième projet -->
+            <div class="portfolio-item">
+                <div class="carousel" id="carousel-4"> 
+                    <!-- Ajoute autant d'images que nécessaire pour chaque projet -->
+                    <a href="https://github.com/theobcl18/portfolio/blob/main/docs/T.Bucaille%20et%20M.Portier%20-%20Dossier%204%20pages%20.pdf" alt="Projet 3 - Aspect 1" target="_blank" class="carousel-image active"></a
                     <!-- Autres images -->
                 </div>
                     <h3> Un lien étroit entre logement étudiant et situation familiale ?  </h3>
-                    <p> Passation de questionnaires et analyse</p>
     
-                    <div class="docs__tags">
-                    <p class="docs__tag docs__tag--green">Terrain et techniques d'enquêtes</p>
-                    </div>
-
+                <div class="docs__tags">
+                <p class="docs__tag docs__tag--red">Terrain et techniques d'enquêtes</p>
+                </div>
             </div>
+
         </div>
     </section>
 
@@ -124,13 +145,19 @@
 
     </main>
     <script src="script.js"></script>
-
+    <div class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">×</span>
+          <img id="modal-image" src="" alt="Document Image">
+          <p id="modal-text" class="modal-text">Etude de l'offre de transport de Transmilenio à Bogotá et des données issues de l'application SafetiPin, permettant aux femmes d'évaluer la sécurité des lieux qu'elles visitent selon divers critères tels que la présence mixte, la présence d'agents de sécurité ou encore le niveau d'éclairage</p>
+        </div>
+      </div>
     <script src="./script.js"></script>
 
 </body>
 
     <footer>
-        <p>© 2025 Théo Bucaille. Tous droits réservés.</p>
+        <p>&copy; 2025 Théo Bucaille. Tous droits réservés.</p>
     </footer>
 
 </html>
