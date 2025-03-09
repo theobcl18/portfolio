@@ -50,16 +50,36 @@ carousels.forEach((carousel, index) => {
 
 const docs = [
     {
-        title: "Carte de densité de haies",
+        title: "Densité de haies Cingal-Suisse-Normande",
         description:"Dossier cartographique, UE SIG et CARTOGRAPHIE",
-        url: "https://github.com/theobcl18/portfolio/blob/main/docs/RenduV8paysage_CC_07_02_.pdf",
+        url: "img/densité_de_haies_Cingal_Suisse_Normande_carte_finale.png",
         tags: ["Cartographies"]
     },
-    {title: "Carte de densité de haies",
+    {title: "Densité de haies Calvados",
         description: "Dossier cartographique, UE SIG et CARTOGRAPHIE",
-        url: "https://github.com/theobcl18/portfolio/blob/main/docs/rendu_cc_geoprocessing_mm.pdf",
+        url: "img/densite_haies_calvados.png",
         tags: ["Cartographies"]
-    }
+    },
+    {title: "Obstruction route Clécy",
+        description: "Dossier cartographique, UE SIG et CARTOGRAPHIE",
+        url: "img/obstruction_route.png",
+        tags: ["Cartographies"]
+    },
+    {title: "Densité de population par hectare au sein des IRIS",
+        description: "Dossier cartographique, UE GESTION DE DONNEES",
+        url: "img/densite_ha_par_iris.png",
+        tags: ["Cartographies"]
+    },
+    {title: "population par bâtiment à Paris",
+        description: "Dossier cartographique, UE GESTION DE DONNEES",
+        url: "img/pop_batiment.png",
+        tags: ["Cartographies"]
+    },
+    {title: "Les isochrones à partir des espaces verts",
+        description: "Dossier cartographique, UE GESTION DE DONNEES",
+        url: "img/espace_vert_dans_paris_et_population_isochrome.png",
+        tags: ["Cartographies"]
+    },
 ];
         // Ajoutez d'autres objets de documents ici si nécessaire
 
@@ -73,8 +93,6 @@ const tagColors = {
     "Infographies et posters": "green",
     "Terrain et techniques d'enquêtes": "red",
     "Diagnostic de territoire": "black",
-    Code: "yellow",
-    "Télédétection": "pink"
 };
 
 const docSelection = document.querySelector(".tag-selection");
