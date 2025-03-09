@@ -10,7 +10,7 @@
 
 /* Corps de la page */
 body {
-    background-color: #1b1b1b;
+    background-color: #ffffff;
     font-family: "Poppins", "sans-serif"; /* Police Poppins */
     font-size: 1.4rem;
     padding: 5rem;
@@ -29,17 +29,16 @@ header {
 
 }
 
-
 p{
     padding-top: 5rem;
     padding-bottom: 3rem;
-    color: #ffffff;
+    color: #000000;
     line-height: 1.4; /* Pour améliorer la lisibilité à l'intérieur des paragraphes */
 }
 
 
 div.profile-container{
-    color: #fff;
+    color: #1a1b1d;
     padding-bottom: 2rem;
 }
 
@@ -79,7 +78,7 @@ header nav a {
     align-items: center;
     justify-content: space-between;
     gap: 3rem;
-    color: #ffffff;
+    color: #000000;
 }
 
 
@@ -90,6 +89,12 @@ header nav a {
     display: flex;
     align-items: center;
     gap: 4rem;
+    
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #5e6d91; /* bleu ciel au survol et pour le lien actif */
 }
 
 
@@ -97,7 +102,7 @@ header nav a {
     padding: 1rem 2rem;
     font-size: 1.5rem;
     color: #ffffff;
-    background-color: #1d4edB;
+    background-color:#0097b2;
     border-radius: 7px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -147,15 +152,6 @@ button { /* pour linkeldn */
 
 
 
-
-.blur{
-    position: absolute;
-    box-shadow: 0 0 1000px 50px #1d4edB;
-    z-index: -100;
-}
-
-
-
 .tag-selection {
     display: flex;
     gap: 0.8rem;
@@ -174,8 +170,8 @@ element.style {
 }
 
 .docs__tag--grey {
-    background-color: #4c3853;
-    color: #fff;
+    background-color: #abafbb;
+    color: #000000;
 
 }
 .docs__tag {
@@ -189,16 +185,16 @@ element.style {
     text-align: center;
 }
 
-.docs__tag.active {
-    background-color: #503636; /* Couleur de fond pour l'état actif */
+/* Classe pour l'état actif */
+.docs__tag.active{
+    background-color: #4a6279; /* Couleur de fond pour l'état actif */
     color: #ffffff; /* Couleur du texte pour l'état actif */
 }
 
-.nav-links a:hover,
-.nav-links a.active {
-    color: #a5f3f8; /* bleu ciel au survol et pour le lien actif */
-}
-
+/*.tag-selection a:hover,
+.tag-selection a.active {
+    color: #a5f3f8; /* bleu ciel au survol et pour le lien actif
+}*/
 
 main {
     padding: 3rem;
@@ -206,13 +202,9 @@ main {
 
 section1.intro{ 
     position: absolute;
-    box-shadow: 0 0 1000px 50px #1d4edB; /* bleu foncé tâche au dessus du bienvenue */
+    box-shadow: 0 0 1000px 50px #ffffff; /* bleu foncé tâche au dessus du bienvenue */
     z-index: -100;
 }
-.nav-links a:hover,
-.nav-links a.active {
-    color: #a5f3f8; /* bleu ciel au survol et pour le lien actif */
-}
 
 
 main {
@@ -221,7 +213,7 @@ main {
 
 section1.intro{ 
     position: absolute;
-    box-shadow: 0 0 1000px 50px #1d4edB; /* bleu foncé tâche au dessus du bienvenue */
+    box-shadow: 0 0 1000px 50px #ffffff; /* bleu foncé tâche au dessus du bienvenue */
     z-index: -100;
 }
 
@@ -260,7 +252,7 @@ section1.intro{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(59, 57, 57, 0.7);
     color: #fff;
     padding: 10px;
     border-radius: 50%;
@@ -288,7 +280,7 @@ img {
     margin-top: 100px; /* Espacement en haut pour éviter que le contenu soit masqué par le container */
     padding: 40px 10%; /* Padding adapté à votre design */
     color: #feffff; /* blanc pour le texte */
-    background: #2a232c; /* truc moche */  
+    background: #d9d9d9; /* truc moche */  
     text-align: center;
     /*padding-top: 0rem; */
     min-height: 100vh;
@@ -298,7 +290,7 @@ img {
 
 /* Bienvenue sur mon portfolio */
 h2{
-    color: #ffffff;
+    color: #000000;
     padding-bottom: 0rem;
 }
 
@@ -310,7 +302,7 @@ h2{
     /* color: #343a3f; /* Noir doux */
     margin-bottom: 20px;
     padding: 10px; /* Espacement autour du texte */
-    background-color: #665083; /* Fond  */
+    background-color: #484e5e ; /* Fond  */
     color: #ffffff; /* Couleur du texte */
     border-radius: 8px; /* Coins arrondis pour un effet plus doux */
     display: inline-block; /* S'assure que le fond ne s'étend pas sur toute la largeur */
@@ -335,7 +327,7 @@ h2{
     width: 80%; /* Largeur des éléments ajustée */
     height: auto; /* Laisser l'élément s'adapter à la hauteur de l'image */
     text-align: center;
-    background: #4c3853;
+    background: #ffffff;
     padding: 10px;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -362,21 +354,21 @@ h2{
 .portfolio-item h3 {
     margin: 2rem; /* Ajoute un peu d'espace au-dessus et en dessous du titre */
     font-size: 22px;
-    color: #ffffff;
+    color: #000000;
     font-weight: 600;
 }
 
 /* Description sous chaque projet */
 .portfolio-item p {
     font-size: 16px;
-    color: #ffffff;
+    color: #000000;
     margin: 10px; /* Ajoute un peu d'espace au-dessus et en dessous du titre */
 }
 
 
 
 footer {
-    color: #ffffff;
+    color: #000000;
     text-align: center;
     padding: 1rem;
     margin-top: 1rem;
@@ -616,4 +608,5 @@ footer {
         font-size: 22px;
     }
 }    
+
 
