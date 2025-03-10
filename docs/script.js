@@ -46,7 +46,67 @@ carousels.forEach((carousel, index) => {
 });
 
 
+const types = [
+	".carto",
+	".diag",
+	".terrain"
+];
+var ongletActif = -1;
 
+boutonAfficherTout = document.querySelector('#afficherTypeTout');
+boutonAfficherTout.addEventListener("click", funcAfficherTypeTout);
+boutonAfficherCarto = document.querySelector('#afficherTypeCarto');
+boutonAfficherCarto.addEventListener("click", funcAfficherTypeCarto);
+boutonAfficherDiag = document.querySelector('#afficherTypeDiag');
+boutonAfficherDiag.addEventListener("click", funcAfficherTypeDiag);
+boutonAfficherTerrain = document.querySelector('#afficherTypeTerrain');
+boutonAfficherTerrain.addEventListener("click", funcAfficherTypeTerrain);
+
+function funcAfficherTypeTout() {
+	ongletActif = -1;
+	actualiserAffichage();
+}
+
+function funcAfficherTypeCarto() {
+	ongletActif = 0;
+	actualiserAffichage();
+}
+
+function funcAfficherTypeDiag() {
+	ongletActif = 1;
+	actualiserAffichage();
+}
+
+function funcAfficherTypeTerrain() {
+	ongletActif = 2;
+	actualiserAffichage();
+}
+
+function actualiserAffichage() {
+	types.forEach((t) => {
+		tab = document.querySelectorAll(t);
+		tab.forEach((projet) => {
+			projet.style.display = "none";
+		})
+	})
+
+	if ( ongletActif === -1 )
+	{
+		types.forEach((t) => {
+			tab = document.querySelectorAll(t);
+			tab.forEach((projet) => {
+				projet.style.display = "initial";
+			})
+		})
+	}
+	else
+	{
+		tableau = document.querySelectorAll(types[ongletActif]);
+		tableau.forEach((projet) => {
+			projet.style.display = "initial";
+		})
+	}
+}
 
 const docs = [
     {

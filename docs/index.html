@@ -48,6 +48,10 @@
 
             <!-- Selection Tags for Work Categories REMETTRE EN LONGUEUR, pas que "diagnostic de territoire soit en 2 lignes"-->
         <div class="tag-selection">
+			<input type="button" id="afficherTypeTout" value="tout"/>
+			<input type="button" id="afficherTypeCarto" value="carto"/>
+			<input type="button" id="afficherTypeDiag" value="diag"/>
+			<input type="button" id="afficherTypeTerrain" value="terrain"/>
             <p class="docs__tag docs__tag--grey">Tous mes travaux</p>
             <p class="docs__tag docs__tag--grey">Cartographies</p>
             <p class="docs__tag docs__tag--grey">Infographies et posters</p>
@@ -67,6 +71,7 @@
         <div class="portfolio-items">
 
             <!-- Premier projet -->
+			<div class="carto">
             <div class="portfolio-item">
                 <div class="carousel" id="carousel-1" data-index="0">
                     <!-- Ajoute plusieurs images que possible pour chaque projet -->
@@ -85,9 +90,11 @@
                 <p class="docs__tag docs__tag--blue">Cartographies</p>
                 </div>
             </div>
+			</div>
 
             <!-- deuxième projet -->
-            <div class="portfolio-item"></div>
+			<div class="carto">
+            <div class="portfolio-item">
                 <div class="carousel" id="carousel-2" data-index="0">
                     <!-- Ajoute plusieurs images que possible pour chaque projet -->
                     <img src="img/densite_ha_par_iris.png" alt="Projet 2 - Aspect 1" data-title="Densité de population par hectare au sein des IRIS" class="carousel-image active">
@@ -102,9 +109,12 @@
                 <div class="docs__tags">
                 <p class="docs__tag docs__tag--blue">Cartographies</p>
                 </div>
+			</div>
+			</div>
 
             
             <!-- troisème projet -->
+			<div class="diag">
             <div class="portfolio-item">
                 <div class="carousel" id="carousel-3"> 
                     <!-- Ajoute autant d'images que nécessaire pour chaque projet -->
@@ -124,8 +134,10 @@
                 <p class="docs__tag docs__tag--black">Diagnostic de territoire</p>
                 </div>
             </div>
+			</div>
 
             <!-- quatrième projet -->
+			<div class="terrain">
             <div class="portfolio-item">
                 <div class="carousel" id="carousel-4"> 
                     <!-- Ajoute autant d'images que nécessaire pour chaque projet -->
@@ -138,6 +150,7 @@
                 <p class="docs__tag docs__tag--red">Terrain et techniques d'enquêtes</p>
                 </div>
             </div>
+			</div>
 
         </div>
     </section>
