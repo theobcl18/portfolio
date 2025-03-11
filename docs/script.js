@@ -49,7 +49,9 @@ carousels.forEach((carousel, index) => {
 const types = [
 	".carto",
 	".diag",
-	".terrain"
+	".terrain",
+    ".poster",
+    ".r"
 ];
 var ongletActif = -1;
 
@@ -61,6 +63,10 @@ boutonAfficherDiag = document.querySelector('#afficherTypeDiag');
 boutonAfficherDiag.addEventListener("click", funcAfficherTypeDiag);
 boutonAfficherTerrain = document.querySelector('#afficherTypeTerrain');
 boutonAfficherTerrain.addEventListener("click", funcAfficherTypeTerrain);
+boutonAfficherPoster = document.querySelector('#afficherTypePoster');
+boutonAfficherPoster.addEventListener("click", funcAfficherTypePoster);
+boutonAfficherR = document.querySelector('#afficherTypeR');
+boutonAfficherR.addEventListener("click", funcAfficherTypeR);
 
 function funcAfficherTypeTout() {
 	ongletActif = -1;
@@ -79,6 +85,16 @@ function funcAfficherTypeDiag() {
 
 function funcAfficherTypeTerrain() {
 	ongletActif = 2;
+	actualiserAffichage();
+}
+
+function funcAfficherTypePoster() {
+	ongletActif = 3;
+	actualiserAffichage();
+}
+
+function funcAfficherTypeR() {
+	ongletActif = 4;
 	actualiserAffichage();
 }
 
@@ -108,7 +124,7 @@ function actualiserAffichage() {
 	}
 }
 
-const docs = [
+/* const docs = [
     {
         title: "Densité de haies Cingal-Suisse-Normande",
         description:"Dossier cartographique, UE SIG et CARTOGRAPHIE",
@@ -287,3 +303,4 @@ tags.forEach(tag => {
         filterDocs(tagText); // Appelez votre fonction pour filtrer les documents
     });
 });
+*/
