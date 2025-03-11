@@ -1,0 +1,604 @@
+
+/* Global styles */
+
+/* Reset les marges et les paddings par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corps de la page */
+body {
+    background-color: #ffffff;
+    font-family: "Poppins", "sans-serif"; /* Police Poppins */
+    font-size: 1.4rem;
+    padding: 5rem;
+    overflow-x: hidden; /* Supprimer le défilement horizontal */
+
+}
+
+/* Style pour le header */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    background-size: 200% 200%;
+
+}
+
+p{
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+    color: #000000;
+    line-height: 1.4; /* Pour améliorer la lisibilité à l'intérieur des paragraphes */
+}
+
+
+div.profile-container{
+    color: #1a1b1d;
+    padding-bottom: 2rem;
+}
+
+media (min-width: 480px) and (max-width: 1024px) {
+    .entetecontainer 
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    
+}
+
+html {
+    font-size: 65%;
+}
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* Section qui sert a rien ?????? */
+header nav a {
+    position: relative;
+    list-style: none;
+    display: flex;
+    max-width: 200px;
+    margin: auto;
+    padding-bottom: 0,75rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    color: #000000;
+}
+
+
+
+/* ligne de navigation CV , LINKEDLN, CONTACT */
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #5e6d91; /* bleu ciel au survol et pour le lien actif */
+}
+
+
+.btn{ /* pour me contacter */
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    color: #ffffff;
+    background-color:#0097b2;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button { /* pour linkeldn */ 
+    appearance: auto;
+    font-style: ;
+    font-variant-ligatures: ;
+    font-variant-caps: ;
+    font-variant-numeric: ;
+    font-variant-east-asian: ;
+    font-variant-alternates: ;
+    font-variant-position: ;
+    font-variant-emoji: ;
+    font-weight: ;
+    font-stretch: ;
+    font-size: ;
+    font-family: ;
+    font-optical-sizing: ;
+    font-size-adjust: ;
+    font-kerning: ;
+    font-feature-settings: ;
+    font-variation-settings: ;
+    text-rendering: auto;
+    color: buttontext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    box-sizing: border-box;
+    background-color: buttonface;
+    margin: 0em;
+    padding-block: 1px;
+    padding-inline: 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial;
+}
+
+
+
+.tag-selection {
+    display: flex;
+    gap: 0.8rem;
+    margin: 2rem 0;  
+}
+
+element.style {
+}
+
+@media (max-width: 480px) {
+    .docs__tag {
+        font-size: 1.2rem;
+        padding: 0.4rem 0.8rem;
+        text-align: center;
+    }
+}
+
+input{
+    background-color: #abafbb;
+    color: #000000;
+    display: flex; /* Utilisation de Flexbox */
+    align-items: center; /* Centre le texte verticalement */
+    justify-content: center; /* Centre le texte horizontalement */
+    padding: 0.4rem 0.8rem;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/* Classe pour l'état actif */
+input:active{
+    background-color: #4a6279; /* Couleur de fond pour l'état actif */
+    color: #ffffff; /* Couleur du texte pour l'état actif */
+}
+
+
+main {
+    padding: 3rem;
+}
+
+section1.intro{ 
+    position: absolute;
+    box-shadow: 0 0 1000px 50px #ffffff; /* bleu foncé tâche au dessus du bienvenue */
+    z-index: -100;
+}
+
+
+main {
+    padding: 3rem;
+}
+
+section1.intro{ 
+    position: absolute;
+    box-shadow: 0 0 1000px 50px #ffffff; /* bleu foncé tâche au dessus du bienvenue */
+    z-index: -100;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.carousel-image.active {
+    display: block;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.carousel-arrow.left {
+    left: 8px;
+}
+
+.carousel-arrow.right {
+    right: 8px;
+}
+
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(59, 57, 57, 0.7);
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 10;
+}
+
+
+
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+
+/* Section Portfolio */
+.portfolio {
+    margin-top: 100px; /* Espacement en haut pour éviter que le contenu soit masqué par le container */
+    padding: 40px 10%; /* Padding adapté à votre design */
+    color: #feffff; /* blanc pour le texte */
+    background: #d9d9d9; /* truc moche */  
+    text-align: center;
+    /*padding-top: 0rem; */
+    min-height: 100vh;
+    border-radius: 15px;
+    display: grid;
+}
+
+/* Bienvenue sur mon portfolio */
+h2{
+    color: #000000;
+    padding-bottom: 0rem;
+}
+
+
+/* Titre de la section Portfolio */
+.petit-texte{          /* "Mes Productions" */
+    font-size: 1.2rem;
+    font-weight: 500;
+    /* color: #343a3f; /* Noir doux */
+    margin-bottom: 20px;
+    padding: 10px; /* Espacement autour du texte */
+    background-color: #484e5e ; /* Fond  */
+    color: #ffffff; /* Couleur du texte */
+    border-radius: 8px; /* Coins arrondis pour un effet plus doux */
+    display: inline-block; /* S'assure que le fond ne s'étend pas sur toute la largeur */
+}
+
+/* Liste des éléments du portfolio */
+.portfolio-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: flex-start; /* Aligner les éléments au début */
+    gap: 2rem; /* Espacement entre les éléments */
+    /*overflow: hidden; /* Défilement */
+    padding-bottom: 20px; /* Espacement au bas pour éviter que les éléments soient collés */
+    /*max-width: 100%; /* Utiliser toute la largeur disponible */
+    /*height: 80vh; /* Ajuster la hauteur de la section des éléments du portfolio */
+}
+
+/* Élément individuel du portfolio */
+.portfolio-item {
+    gap: 2rem;
+    flex-shrink: 0; /* Empêche les éléments de rétrécir */
+    width: 80%; /* Largeur des éléments ajustée */
+    height: auto; /* Laisser l'élément s'adapter à la hauteur de l'image */
+    text-align: center;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /*margin: 0 auto; /* Centrer les éléments */
+    font-size: 5rem;
+}
+
+/* Style pour les images des éléments du portfolio */
+.portfolio-item img {
+    width: 100%; /* S'assurer que l'image occupe toute la largeur de l'élément */
+    height: 200px; 
+    object-fit: cover;
+   cursor: pointer;
+}
+
+/* Effet au survol des éléments du portfolio */
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Titre de chaque projet dans le portfolio */
+.portfolio-item h3 {
+    margin: 2rem; /* Ajoute un peu d'espace au-dessus et en dessous du titre */
+    font-size: 22px;
+    color: #000000;
+    font-weight: 600;
+}
+
+/* Description sous chaque projet */
+.portfolio-item p {
+    font-size: 16px;
+    color: #000000;
+    margin: 10px; /* Ajoute un peu d'espace au-dessus et en dessous du titre */
+}
+
+
+
+footer {
+    color: #000000;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+
+.hero .btn:hover {
+    background: #555;
+}
+
+
+
+/* Projects a quoi ca sert,,,,,,,,,,*/ 
+/*.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project-card {
+    border: 1px solid #ca1616;
+    border-radius: 5px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.project-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.project-card h3 {
+    margin-top: 0.5rem;
+}
+
+.project-card a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}   */
+
+
+
+
+
+/* Modal Styles */
+.modal {
+    display: none; /* Masqué par défaut */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Fond semi-transparent */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 2rem;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 0.5rem;
+}
+
+.modal-text {
+    margin-top: 1rem;
+    color: #444; 
+    font-size: 1.4rem; 
+    text-align: justify; 
+    padding: 0.5rem; 
+}
+
+.modal img {
+    width: 100%; /* S'adapte à la largeur du modal */
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Ajouter des requêtes de media pour la réactivité */
+
+/* Pour les écrans larges (tablettes et petits écrans de bureau) */
+
+@media screen and (max-width: 480px) {
+    .profile-container h1 {
+        font-size: 5rem;
+    }
+    .button {
+        font-size: 1.2rem;
+        padding: 0.4rem 0.8rem;
+    }
+    .docs__tag{
+        font-size: 1.2rem;
+        padding: 0.4rem 0.8rem;
+     text-align: center;
+    
+    }
+    body {
+        padding: 2rem;
+    }
+    .portfolio h2 {
+        font-size: 24px;
+    }
+
+    .portfolio-items {
+        grid-template-columns: 1fr; /* Une seule colonne sur les très petits écrans */
+        gap: 15px;
+    }
+
+    .portfolio-item {
+        width: 100%;
+    }
+
+    .nav-links {
+        font-size: 16px;
+        gap: 10px;
+        right: 10px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+}
+
+
+
+/* Pour les écrans de taille moyenne (tablettes portrait et petits écrans mobiles) */
+@media screen and (max-width: 768px) {
+    .profile-container h1 {
+        font-size: 6rem;
+    }
+    .entetecontainer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .docs__tag {
+        font-size: 1.4rem;
+        padding: 0.4rem 0.6rem;
+    }
+    .button {
+        font-size: 1.4rem;
+        padding: 0.4rem 0.6rem;
+    }
+    body {
+        padding: 2.5rem;
+    }
+    .portfolio h2 {
+        font-size: 28px;
+    }
+
+    .portfolio-items {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        height: auto;
+        display: grid;
+    }
+
+    .portfolio-item {
+        width: 95%;
+    }
+
+    .navbar {
+        font-size: 18px;
+        gap: 15px;
+        right: 20px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+}
+
+
+/* Pour les écrans larges (tablettes et petits écrans de bureau) */
+@media screen and (max-width: 1200px) {
+    .profile-container h1 {
+        font-size: 7rem;
+    }
+    .entetecontainer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .docs__tag{
+        font-size: 1.6rem;
+        padding: 0.4rem 0.8rem;
+    }
+    .nav_links {
+        font-size: 1.6rem;
+        padding: 0.4rem 0.8rem;
+    }
+    body {
+        padding: 3rem;
+    }
+    .portfolio h2 {
+        font-size: 35px;
+    }
+    
+    .portfolio-items {
+        grid-template-cons: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 30px;
+        height: auto;
+    }
+    
+    .portfolio-item {
+        width: 90%;
+    }
+    
+    .nav-links {
+        font-size: 20px;
+        gap: 25px;
+    }
+    
+    .logo {
+        font-size: 22px;
+    }
+}    
+
+
