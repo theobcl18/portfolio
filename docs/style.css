@@ -169,12 +169,9 @@ element.style {
     }
 }
 
-.docs__tag--grey {
+input{
     background-color: #abafbb;
     color: #000000;
-
-}
-.docs__tag {
     display: flex; /* Utilisation de Flexbox */
     align-items: center; /* Centre le texte verticalement */
     justify-content: center; /* Centre le texte horizontalement */
@@ -186,15 +183,11 @@ element.style {
 }
 
 /* Classe pour l'état actif */
-.docs__tag.active{
+input:active{
     background-color: #4a6279; /* Couleur de fond pour l'état actif */
     color: #ffffff; /* Couleur du texte pour l'état actif */
 }
 
-/*.tag-selection a:hover,
-.tag-selection a.active {
-    color: #a5f3f8; /* bleu ciel au survol et pour le lien actif
-}*/
 
 main {
     padding: 3rem;
@@ -240,11 +233,11 @@ section1.intro{
 }
 
 .carousel-arrow.left {
-    left: 10px;
+    left: 8px;
 }
 
 .carousel-arrow.right {
-    right: 10px;
+    right: 8px;
 }
 
 
@@ -373,7 +366,6 @@ footer {
     padding: 1rem;
     margin-top: 1rem;
 }
-
 
 
 .hero .btn:hover {
