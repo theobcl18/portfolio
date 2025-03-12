@@ -48,10 +48,10 @@ carousels.forEach((carousel, index) => {
 
 const types = [
 	".carto",
+    ".poster",
 	".diag",
 	".terrain",
-    ".poster",
-    ".r"
+    ".r",
 ];
 var ongletActif = -1;
 
@@ -59,12 +59,12 @@ boutonAfficherTout = document.querySelector('#afficherTypeTout');
 boutonAfficherTout.addEventListener("click", funcAfficherTypeTout);
 boutonAfficherCarto = document.querySelector('#afficherTypeCarto');
 boutonAfficherCarto.addEventListener("click", funcAfficherTypeCarto);
+boutonAfficherPoster = document.querySelector('#afficherTypePoster');
+boutonAfficherPoster.addEventListener("click", funcAfficherTypePoster);
 boutonAfficherDiag = document.querySelector('#afficherTypeDiag');
 boutonAfficherDiag.addEventListener("click", funcAfficherTypeDiag);
 boutonAfficherTerrain = document.querySelector('#afficherTypeTerrain');
 boutonAfficherTerrain.addEventListener("click", funcAfficherTypeTerrain);
-boutonAfficherPoster = document.querySelector('#afficherTypePoster');
-boutonAfficherPoster.addEventListener("click", funcAfficherTypePoster);
 boutonAfficherR = document.querySelector('#afficherTypeR');
 boutonAfficherR.addEventListener("click", funcAfficherTypeR);
 
@@ -78,17 +78,17 @@ function funcAfficherTypeCarto() {
 	actualiserAffichage();
 }
 
-function funcAfficherTypeDiag() {
+function funcAfficherTypePoster() {
 	ongletActif = 1;
 	actualiserAffichage();
 }
 
-function funcAfficherTypeTerrain() {
+function funcAfficherTypeDiag() {
 	ongletActif = 2;
 	actualiserAffichage();
 }
 
-function funcAfficherTypePoster() {
+function funcAfficherTypeTerrain() {
 	ongletActif = 3;
 	actualiserAffichage();
 }
