@@ -159,3 +159,5 @@ window.addEventListener('click', (e) => {
 document.addEventListener('DOMContentLoaded', function() {
     filterDocs(); // Affiche tous les documents au chargement
 });
+
+

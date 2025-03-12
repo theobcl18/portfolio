@@ -15,8 +15,37 @@ body {
     font-size: 1.4rem;
     padding: 5rem;
     overflow-x: hidden; /* Supprimer le défilement horizontal */
+    background: linear-gradient(80deg, #ffffff, #e8edee);
+    background-attachment: fixed;
 
 }
+
+/* Loader container */
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Animation cercle tournant */
+.loader::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    border: 5px solid #0097b2;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Animation */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 
 /* Style pour le header */
 header {
@@ -38,16 +67,39 @@ p{
 
 
 div.profile-container{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #1a1b1d;
-    padding-bottom: 2rem;
+    padding-bottom: 1.8rem;
 }
 
-media (min-width: 480px) and (max-width: 1024px) {
-    .entetecontainer 
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    
+/* Structure de base */
+.entetecontainer {
+    display: flex;
+    justify-content: space-between; /* Sépare le titre et les boutons, positionne le nom à gauche et les boutons à droite */ 
+    align-items: center; /* Centre verticalement */
+    flex-wrap: wrap; /* Permet le passage à la ligne si nécessaire */
+    gap: 2rem;
+}
+
+/* ligne de navigation CV , LINKEDLN, CONTACT */
+/* Pour que les boutons restent alignés horizontalement */
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* Media query pour les écrans plus petits */
+@media (max-width: 768px) {
+    .entetecontainer {
+        flex-direction: column; /* Empile le titre et les boutons */
+        align-items: center; /* Centre le tout */
+        gap: 1.5rem; 
+    }
+
+    .nav-links {
+        justify-content: center; /* Centre les boutons horizontalement */
+        flex-wrap: wrap; /* S'assure que les boutons restent alignés même si ça dépasse */
+    }
 }
 
 html {
@@ -82,18 +134,10 @@ header nav a {
 }
 */
 
-
-/* ligne de navigation CV , LINKEDLN, CONTACT */
-.nav-links {
-    display: flex;
-    gap: 2rem;
-    
-}
-
 .nav-links a:hover,
 .nav-links a.active {
-    color: #c7c9d3; /* bleu ciel au survol du btn actif */
-    transform: scale(1.05); /* grossit au survol du btn actif */
+    color: #c7c9d3; /*au survol du btn actif */
+    transform: scale(1.10); /* grossit au survol du btn actif */
 }
 
 
@@ -107,7 +151,6 @@ header nav a {
     transition: background-color 0.3s, transform 0.2s;
     text-decoration: none;
 }
-
 
 
 element.style {
@@ -163,6 +206,7 @@ h2{
 
 /* Section Portfolio */
 .portfolio {
+    border: 2px solid #484e5e; /* Pour voir les limites visuelles */
     margin-top: 20px; /* Espacement en haut pour éviter que le contenu soit masqué par le container */
     padding: 40px 10%; /* Padding adapté à votre design */
     color: #feffff; /* blanc pour le texte */
@@ -171,8 +215,12 @@ h2{
     /*padding-top: 0rem; */
     min-height: 100vh;
     border-radius: 15px;
-    display: grid;
-    /* overflow: hidden;  Empêche le débordement de la partie (coupe)*/
+    display: flex;
+    flex-direction: column; /* S'assure que les éléments s'empilent verticalement */
+    gap: 2rem;
+    max-width: 100%;
+    /* overflow: hidden; /* Coupe les débordements internes */
+    box-sizing: border-box; /* Pour que padding + border soient inclus dans la taille */
 }
 
 /* Titre de la section Portfolio */
@@ -186,25 +234,31 @@ h2{
     color: #ffffff; /* Couleur du texte */
     border-radius: 8px; /* Coins arrondis */
     display: inline-block; /* S'assure que le fond ne s'étend pas sur toute la largeur */
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .tag-selection {
     display: flex;
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
+    justify-content: center; /* Centre les inputs dans la section */
     gap: 0.8rem;
-    margin: 2rem 0;  
+    margin: 2rem 0;
+    max-width: 100%; /* évite qu'ils ne s'étendent au-delà de leur conteneur.*/
+    box-sizing: border-box;
 }
 
 input{
     background-color: #abafbb;
     color: #000000;
-    display: flex; /* Utilisation de Flexbox */
-    align-items: center; /* Centre le texte verticalement */
     justify-content: center; /* Centre le texte horizontalement */
     padding: 0.4rem 0.8rem;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1.5rem;
     text-align: center;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 /* Classe pour l'état actif */
@@ -212,7 +266,9 @@ input:hover{
     background-color: #4a6279; /* Couleur de fond pour le survol */
     color: #ffffff; /* Couleur du texte */
     transform: scale(1.05); /* grossit au survol du btn actif */
+    transition: all 0.5s ease;
 }
+
 
 /* Liste des éléments du portfolio */
 .portfolio-items {
@@ -223,23 +279,24 @@ input:hover{
     /* padding-bottom: 10px; /* Espacement au bas pour éviter que les éléments soient collés */
     /*max-width: 100%; /* Utiliser toute la largeur disponible */
     /*height: 80vh; /* Ajuster la hauteur de la section des éléments du portfolio */
-    /* width: 100%; /* S'assure que la grille respecte les limites */
-    /* box-sizing: border-box; /* Pour éviter que les paddings ajoutent de la largeur */
+    width: 100%; /* S'assure que la grille respecte les limites */
+    box-sizing: border-box; /* Pour éviter que les paddings ajoutent de la largeur */
 }
 
 /* Élément individuel du portfolio */
 .portfolio-item {
-    gap: 1rem;
-    flex-shrink: 0; /* Empêche les éléments de rétrécir */
-    text-align: center;
+    /*gap: 1rem;*/
+    /*flex-shrink: 0; /* Empêche les éléments de rétrécir */
     background: #ffffff;
-    padding: 10px;
-    border-radius: 12px;
+    padding: 8px;
+    border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     /*margin: 0 auto; /* Centrer les éléments */
     font-size: 1.5rem;
     overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* Style pour les images des éléments du portfolio */
@@ -379,7 +436,7 @@ footer {
 
 /* Pour les écrans larges (tablettes et petits écrans de bureau) */
 
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) {
     .profile-container h1 {
         font-size: 5rem;
     }
@@ -387,12 +444,7 @@ footer {
         font-size: 1.2rem;
         padding: 0.4rem 0.8rem;
     }
-    .docs__tag{
-        font-size: 1.2rem;
-        padding: 0.4rem 0.8rem;
-     text-align: center;
-    
-    }
+
     body {
         padding: 2rem;
     }
@@ -423,7 +475,7 @@ footer {
 
 
 /* Pour les écrans de taille moyenne (tablettes portrait et petits écrans mobiles) */
-@media screen and (max-width: 768px) {
+@media (min-width: 480px) and (max-width: 1024px) {
     .profile-container h1 {
         font-size: 6rem;
     }
@@ -432,10 +484,7 @@ footer {
         align-items: center;
         text-align: center;
     }
-    .docs__tag {
-        font-size: 1.4rem;
-        padding: 0.4rem 0.6rem;
-    }
+
     .button {
         font-size: 1.4rem;
         padding: 0.4rem 0.6rem;
@@ -471,7 +520,7 @@ footer {
 
 
 /* Pour les écrans larges (tablettes et petits écrans de bureau) */
-@media screen and (max-width: 1200px) {
+@media (min-width: 1024px) {
     .profile-container h1 {
         font-size: 7rem;
     }
@@ -480,10 +529,6 @@ footer {
         justify-content: space-between;
     }
 
-    .docs__tag{
-        font-size: 1.6rem;
-        padding: 0.4rem 0.8rem;
-    }
     .nav_links {
         font-size: 1.6rem;
         padding: 0.4rem 0.8rem;
