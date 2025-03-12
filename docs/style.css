@@ -11,7 +11,7 @@
 /* Corps de la page */
 body {
     background-color: #ffffff;
-    font-family: "Poppins", "sans-serif"; /* Police Poppins */
+    font-family: "Arial", "sans-serif"; 
     font-size: 1.4rem;
     padding: 5rem;
     overflow-x: hidden; /* Supprimer le défilement horizontal */
@@ -281,14 +281,14 @@ input:hover{
     /*height: 80vh; /* Ajuster la hauteur de la section des éléments du portfolio */
     width: 100%; /* S'assure que la grille respecte les limites */
     box-sizing: border-box; /* Pour éviter que les paddings ajoutent de la largeur */
+    grid-auto-rows: minmax(250px, auto); /* Hauteur minimale, s'ajuste si le contenu est plus grand */
 }
 
 /* Élément individuel du portfolio */
 .portfolio-item {
-    /*gap: 1rem;*/
     /*flex-shrink: 0; /* Empêche les éléments de rétrécir */
     background: #ffffff;
-    padding: 8px;
+    padding: 10px;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -316,17 +316,17 @@ input:hover{
 /* Titre de chaque projet dans le portfolio */
 .portfolio-item h3 {
     margin: 2rem; /* Ajoute un peu d'espace au-dessus et en dessous du titre */
-    font-size: 22px;
+    font-size: 16px;
     color: #000000;
-    font-weight: 600;
+    font-weight: 500;
     text-decoration: none;
 }
 
 /* titre de la catégorie (Carto, poster, terrain, diag etc) sous chaque projet */
 .portfolio-item p {
-    font-size: 16px;
+    font-size: 12px;
     color: #000000;
-    margin: 10px; /* Ajoute un peu d'espace au-dessus et en dessous du titre */
+    margin: 0px; /* Ajoute un peu d'espace au-dessus et en dessous du titre */
 }
 
 
