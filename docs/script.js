@@ -52,6 +52,7 @@ const types = [
 	".diag",
 	".terrain",
     ".r",
+    ".photo",
 ];
 var ongletActif = -1;
 
@@ -67,6 +68,8 @@ boutonAfficherTerrain = document.querySelector('#afficherTypeTerrain');
 boutonAfficherTerrain.addEventListener("click", funcAfficherTypeTerrain);
 boutonAfficherR = document.querySelector('#afficherTypeR');
 boutonAfficherR.addEventListener("click", funcAfficherTypeR);
+boutonAfficherPhoto = document.querySelector('#afficherTypePhoto');
+boutonAfficherPhoto.addEventListener("click", funcAfficherTypePhoto);
 
 function funcAfficherTypeTout() {
 	ongletActif = -1;
@@ -97,6 +100,12 @@ function funcAfficherTypeR() {
 	ongletActif = 4;
 	actualiserAffichage();
 }
+
+function funcAfficherTypePhoto() {
+	ongletActif = 5;
+	actualiserAffichage();
+}
+
 
 function actualiserAffichage() {
 	types.forEach((t) => {
