@@ -294,6 +294,7 @@ input:hover{
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: scale(1); /* Taille normale */
     /*margin: 0 auto; /* Centrer les éléments */
     font-size: 1.5rem;
     overflow: hidden;
@@ -320,9 +321,9 @@ input:hover{
 
 /* Quand un élément est actif (cliqué) */
 .portfolio-item.active {
-    height: 500px; /* Taille agrandie */
+    height: 700px; /* Taille agrandie */
     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
-    transform: scale(1.05); /* Légèrement plus grand */
+    transform: scale(1.2); /* Légèrement plus grand */
 }
 
 /* Titre de chaque projet dans le portfolio */
@@ -331,17 +332,31 @@ input:hover{
     font-size: 16px;
     color: #000000;
     font-weight: 500;
-    text-decoration: none;
+    text-decoration: none !important; /* Supprime le soulignement */
+    display: inline-block !important; /* Supprime le soulignement */
+}
+
+.portfolio-item h3::after {
+    content: " 📄"; /* Ajoute une icône de document */
+    font-size: 1.2rem;
 }
 
 /* titre de la catégorie (Carto, poster, terrain, diag etc) sous chaque projet */
 .portfolio-item p {
     font-size: 12px;
     color: #000000;
-    margin: 0px; /* Ajoute un peu d'espace au-dessus et en dessous du titre */
+    /* margin: 0px; /* Ajoute un peu d'espace au-dessus et en dessous du titre */
     text-decoration: none;
 }
 
+.portfolio-item h3 a,
+.portfolio-item h3 a:visited,
+.portfolio-item h3 a:hover,
+.portfolio-item h3 a:focus {
+    text-decoration: none !important;
+    color: inherit !important;
+    background: none !important;
+}
 
 
 footer {
@@ -582,7 +597,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f0f0f0;
+    background-color: #ffffff;
 }
 
 .carousel-image.active {
@@ -597,11 +612,11 @@ footer {
 }
 
 .carousel-arrow.left {
-    left: 8px;
+    left: 1px;
 }
 
 .carousel-arrow.right {
-    right: 8px;
+    right: 1px;
 }
 
 
@@ -609,11 +624,11 @@ footer {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(80, 77, 77, 0.7);
+    background-color: #504d4db3;
     color: #fff;
     padding: 10px;
-    border-radius: 50%;
-    font-size: 20px;
+    border-radius: 100%;
+    font-size: 15px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
     z-index: 10;

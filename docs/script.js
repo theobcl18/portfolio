@@ -112,6 +112,7 @@ function actualiserAffichage() {
 		tab = document.querySelectorAll(t);
 		tab.forEach((projet) => {
 			projet.style.display = "none";
+            
 		})
 	})
 
@@ -121,6 +122,7 @@ function actualiserAffichage() {
 			tab = document.querySelectorAll(t);
 			tab.forEach((projet) => {
 				projet.style.display = "initial";
+                
 			})
 		})
 	}
@@ -129,6 +131,7 @@ function actualiserAffichage() {
 		tableau = document.querySelectorAll(types[ongletActif]);
 		tableau.forEach((projet) => {
 			projet.style.display = "initial";
+            projet.classList.add("active"); // Ajoute l'effet d'agrandissement
 		})
 	}
 }
@@ -171,23 +174,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    const buttons = document.querySelectorAll(".filter-button"); // Boutons de filtre
-    const portfolioItems = document.querySelectorAll(".portfolio-item");
-
-    buttons.forEach(button => {
-        button.addEventListener("click", function () {
-            const category = this.getAttribute("id").replace("afficherType", "").toLowerCase();
-
-            portfolioItems.forEach(item => {
-                if (category === "tout" || item.classList.contains(category)) {
-                    item.classList.add("active"); // Agrandit
-                    item.style.display = "block"; // Rend visible
-                } else {
-                    item.classList.remove("active"); // Réduit à sa taille normale
-                    item.style.display = "none"; // Cache l'élément
-                }
-            });
-        });
-    });
-});
