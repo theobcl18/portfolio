@@ -65,8 +65,8 @@ boutonAfficherPoster.addEventListener("click", funcAfficherTypePoster);
 boutonAfficherDiag = document.querySelector('#afficherTypeDiag');
 boutonAfficherDiag.addEventListener("click", funcAfficherTypeDiag);
 boutonAfficherR = document.querySelector('#afficherTypeR');
-boutonAfficherR.addEventListener("click", funcAfficherTypeTerrain);
-boutonAfficherTerrain = document.querySelector('#afficherTypeR');
+boutonAfficherR.addEventListener("click", funcAfficherTypeR);
+boutonAfficherTerrain = document.querySelector('#afficherTypeTerrain');
 boutonAfficherTerrain.addEventListener("click", funcAfficherTypeTerrain);
 boutonAfficherPhoto = document.querySelector('#afficherTypePhoto');
 boutonAfficherPhoto.addEventListener("click", funcAfficherTypePhoto);
@@ -170,3 +170,24 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+
+document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".filter-button"); // Boutons de filtre
+    const portfolioItems = document.querySelectorAll(".portfolio-item");
+
+    buttons.forEach(button => {
+        button.addEventListener("click", function () {
+            const category = this.getAttribute("id").replace("afficherType", "").toLowerCase();
+
+            portfolioItems.forEach(item => {
+                if (category === "tout" || item.classList.contains(category)) {
+                    item.classList.add("active"); // Agrandit
+                    item.style.display = "block"; // Rend visible
+                } else {
+                    item.classList.remove("active"); // Réduit à sa taille normale
+                    item.style.display = "none"; // Cache l'élément
+                }
+            });
+        });
+    });
+});

@@ -299,20 +299,30 @@ input:hover{
     overflow: hidden;
     width: 100%;
     box-sizing: border-box;
+    height: 400px; /* Définir une hauteur uniforme */
+    transition: all 0.3s ease-in-out;
 }
 
 /* Style pour les images des éléments du portfolio */
 .portfolio-item img {
     width: 100%; /* S'assurer que l'image occupe toute la largeur de l'élément */
     height: 200px; 
-    object-fit: cover;
-   cursor: pointer;
+    /* object-fit: cover; */
+    cursor: pointer;
+    object-fit: contain; /* Garantit que toute l'image est visible sans recadrage */
 }
 
 /* Effet au survol des éléments du portfolio */
 .portfolio-item:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Quand un élément est actif (cliqué) */
+.portfolio-item.active {
+    height: 500px; /* Taille agrandie */
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+    transform: scale(1.05); /* Légèrement plus grand */
 }
 
 /* Titre de chaque projet dans le portfolio */
