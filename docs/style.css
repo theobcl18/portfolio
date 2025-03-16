@@ -336,10 +336,10 @@ input:hover{
     display: inline-block !important; /* Supprime le soulignement */
 }
 
-.portfolio-item h3::after {
-    content: " 📄"; /* Ajoute une icône de document */
-    font-size: 1.2rem;
-}
+/* .portfolio-item h3::after {
+    content: " 📄";  Ajoute une icône de document 
+    font-size: 1.2rem;     Est utilisé quand tous les h3 ont un lien mais pas ici !!
+}*/ 
 
 /* titre de la catégorie (Carto, poster, terrain, diag etc) sous chaque projet */
 .portfolio-item p {
