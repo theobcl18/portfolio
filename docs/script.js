@@ -50,8 +50,8 @@ const types = [
 	".carto",
     ".poster",
 	".diag",
-	".terrain",
-    ".r",
+	".r",
+    ".terrain",
     ".photo",
 ];
 var ongletActif = -1;
@@ -64,10 +64,10 @@ boutonAfficherPoster = document.querySelector('#afficherTypePoster');
 boutonAfficherPoster.addEventListener("click", funcAfficherTypePoster);
 boutonAfficherDiag = document.querySelector('#afficherTypeDiag');
 boutonAfficherDiag.addEventListener("click", funcAfficherTypeDiag);
-boutonAfficherTerrain = document.querySelector('#afficherTypeTerrain');
-boutonAfficherTerrain.addEventListener("click", funcAfficherTypeTerrain);
 boutonAfficherR = document.querySelector('#afficherTypeR');
-boutonAfficherR.addEventListener("click", funcAfficherTypeR);
+boutonAfficherR.addEventListener("click", funcAfficherTypeTerrain);
+boutonAfficherTerrain = document.querySelector('#afficherTypeR');
+boutonAfficherTerrain.addEventListener("click", funcAfficherTypeTerrain);
 boutonAfficherPhoto = document.querySelector('#afficherTypePhoto');
 boutonAfficherPhoto.addEventListener("click", funcAfficherTypePhoto);
 
@@ -91,12 +91,12 @@ function funcAfficherTypeDiag() {
 	actualiserAffichage();
 }
 
-function funcAfficherTypeTerrain() {
+function funcAfficherTypeR() {
 	ongletActif = 3;
 	actualiserAffichage();
 }
 
-function funcAfficherTypeR() {
+function funcAfficherTypeTerrain() {
 	ongletActif = 4;
 	actualiserAffichage();
 }
