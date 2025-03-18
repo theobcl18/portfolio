@@ -112,9 +112,10 @@ function actualiserAffichage() {
 		tab = document.querySelectorAll(t);
 		tab.forEach((projet) => {
 			projet.style.display = "none";
+            projet.querySelector('.portfolio-item').classList.remove("active"); // Retire l'effet d'agrandissement
             
-		})
-	})
+		});
+	});
 
 	if ( ongletActif === -1 )
 	{
@@ -122,9 +123,10 @@ function actualiserAffichage() {
 			tab = document.querySelectorAll(t);
 			tab.forEach((projet) => {
 				projet.style.display = "initial";
+                projet.querySelector('.portfolio-item').classList.remove("active"); // Pas d'agrandissement pour "Tous"
                 
-			})
-		})
+			});
+		});
 	}
 	else
 	{
@@ -132,7 +134,8 @@ function actualiserAffichage() {
 		tableau.forEach((projet) => {
 			projet.style.display = "initial";
             projet.classList.add("active"); // Ajoute l'effet d'agrandissement
-		})
+            projet.querySelector('.portfolio-item').classList.add("active"); // Ajoute l'effet d'agrandissement
+		});
 	}
 }
 

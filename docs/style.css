@@ -17,6 +17,7 @@ body {
     overflow-x: hidden; /* Supprimer le défilement horizontal */
     background: linear-gradient(80deg, #ffffff, #e8edee);
     background-attachment: fixed;
+    text-align: justify;
 
 }
 
@@ -145,11 +146,12 @@ header nav a {
     padding: 1rem 1.6rem;
     font-size: 1.5rem;
     color: #ffffff;
-    background-color:#0097b2;
-    border-radius: 7px;
+    background-color:#0b8297;
+    border-radius: 15px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
     text-decoration: none;
+    border: 2px solid #ffffff; /* Ajout du contour blanc */
 }
 
 
@@ -597,7 +599,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ffffff;
+    background-color: #fafafa;
 }
 
 .carousel-image.active {
@@ -624,8 +626,8 @@ footer {
     position: absolute;
     top: 85%;
     transform: translateY(-50%);
-    background-color: #ffffff;
-    color: #646161b3;
+    background-color: #696262;
+    color: #ffffff;
     padding: 10px;
     border-radius: 100%;
     font-size: 15px;
