@@ -155,9 +155,6 @@ header nav a {
 }
 
 
-element.style {
-}
-
 @media (max-width: 480px) {
     .docs__tag {
         font-size: 1.2rem;
