@@ -320,7 +320,7 @@ input:hover{
 
 /* Quand un élément est actif (cliqué) */
 .portfolio-item.active {
-    height: 700px; /* Taille agrandie */
+    /*height: 700px; /* Taille agrandie */
     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
     transform: scale(1.2); /* Légèrement plus grand */
 }
@@ -369,40 +369,6 @@ footer {
 .hero .btn:hover {
     background: #555;
 }
-
-
-
-/* Projects a quoi ca sert,,,,,,,,,,*/ 
-/*.projects-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.project-card {
-    border: 1px solid #ca1616;
-    border-radius: 5px;
-    padding: 1rem;
-    text-align: center;
-}
-
-.project-card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-.project-card h3 {
-    margin-top: 0.5rem;
-}
-
-.project-card a {
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
-}   */
-
-
 
 
 
