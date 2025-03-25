@@ -139,6 +139,7 @@ function actualiserAffichage() {
 	}
 }
 
+
 // Création du modal pour l'affichage de l'image en plein écran
 const modal = document.createElement('div');
 modal.classList.add('modal');
@@ -176,4 +177,71 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+
+
+
+// Création d'un fond avec des particules
+
+const canvas = document.getElementById("canvas"); // Déclaration unique en global
+const ctx = canvas.getContext("2d");
+
+function setupCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+setupCanvas();
+
+
+const particles = [];
+
+class Particle {
+    constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.radius = Math.random() * 6 + 2; // Taille aléatoire
+        this.dx = (Math.random() - 0.5) * 2; // Vitesse X
+        this.dy = (Math.random() - 0.5) * 2; // Vitesse Y
+        this.color = `rgba(255, 255, 255, ${Math.random() * 0.5 + 0.3})`; // Blanc transparent
+    }
+
+    move() {
+        this.x += this.dx;
+        this.y += this.dy;
+
+        if (this.x + this.radius > canvas.width || this.x - this.radius < 0) {
+            this.dx *= -1; // Rebond horizontal
+        }
+        if (this.y + this.radius > canvas.height || this.y - this.radius < 0) {
+            this.dy *= -1; // Rebond vertical
+        }
+    }
+
+    draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+    }
+}
+
+function initParticles(count) {
+    for (let i = 0; i < count; i++) {
+        particles.push(new Particle());
+    }
+}
+
+// Animation des particules
+function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Mettre à jour et dessiner chaque particule
+    particles.forEach(particle => {
+        particle.move();
+        particle.draw();
+    });
+    requestAnimationFrame(animate);
+}
+
+initParticles(50); // Nombre de particules
+animate(); // Démarrer l'animation
 

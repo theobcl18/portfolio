@@ -10,18 +10,30 @@
 
 /* Corps de la page */
 body {
-    background-color: #ffffff;
+    background-color: #e8edee;
     font-family: "Arial", "sans-serif"; 
     font-size: 1.4rem;
     padding: 5rem;
     overflow-x: hidden; /* Supprimer le défilement horizontal */
-    background: linear-gradient(80deg, #ffffff, #e8edee);
     background-attachment: fixed;
     text-align: justify;
+    height: 100%; /* 100% de la hauteur de la page */
 
 }
 
-/* Loader container */
+/* Le canvas prend toute la fenêtre */
+canvas {
+    background-color: #e8edee !important; /* Le fond DOIT devenir bleu */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;        /* Prendre toute la largeur de la fenêtre */
+    height: 100vh;       /* Prendre toute la hauteur de la fenêtre */
+    z-index: -1;         /* Mettre le canvas derrière tous les autres éléments */
+}
+
+
+/* Loader container A FAIRE FONCTIONNER*/
 .loader {
     display: flex;
     justify-content: center;
@@ -48,6 +60,7 @@ body {
 }
 
 
+
 /* Style pour le header */
 header {
     display: flex;
@@ -57,13 +70,6 @@ header {
     padding: 15px;
     background-size: 200% 200%;
 
-}
-
-p{
-    padding-top: 5rem;
-    padding-bottom: 3rem;
-    color: #000000;
-    line-height: 1.4; /* Pour améliorer la lisibilité à l'intérieur des paragraphes */
 }
 
 
@@ -164,25 +170,24 @@ header nav a {
 }
 
 
-main {
-    padding: 3rem;
-}
-
-section1.intro{ 
-    position: absolute;
-    box-shadow: 0 0 1000px 50px #ffffff; /* bleu foncé tâche au dessus du bienvenue */
-    z-index: -100;
-}
-
 
 main {
     padding: 3rem;
 }
 
-section1.intro{ 
-    position: absolute;
-    box-shadow: 0 0 1000px 50px #ffffff; /* bleu foncé tâche au dessus du bienvenue */
-    z-index: -100;
+
+/* Bienvenue sur mon portfolio */
+h2{
+    color: #000000;
+    padding-bottom: 0rem;
+    padding-top: 2rem;
+}
+
+p{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    color: #000000;
+    line-height: 1.4; /* Pour améliorer la lisibilité à l'intérieur des paragraphes */
 }
 
 
@@ -194,12 +199,6 @@ div {
 img {
     overflow-clip-margin: content-box;
     overflow: clip;
-}
-
-/* Bienvenue sur mon portfolio */
-h2{
-    color: #000000;
-    padding-bottom: 0rem;
 }
 
 
@@ -299,14 +298,14 @@ input:hover{
     overflow: hidden;
     width: 100%;
     box-sizing: border-box;
-    height: 400px; /* Définir une hauteur uniforme */
+    height: 500px; /* Définir une hauteur uniforme */
     transition: all 0.3s ease-in-out;
 }
 
 /* Style pour les images des éléments du portfolio */
 .portfolio-item img {
     width: 100%; /* S'assurer que l'image occupe toute la largeur de l'élément */
-    height: 200px; 
+    height: 300px; 
     /* object-fit: cover; */
     cursor: pointer;
     object-fit: contain; /* Garantit que toute l'image est visible sans recadrage */
