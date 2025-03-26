@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="productions.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../contenu/head.png" type="image/x-icon">
+    <title>Portfolio - Profil</title>
+</head>
+<body>
+    <div class="navigation">
+        <nav id="nav">
+            <div id="icons"></div>
+            <div class="background"></div>
+            <ul>
+                <li><a href="../index.html">MENU</a></li>
+                <li><a href="/profil/profil.html">PROFIL</a></li>
+                <li><a href="/compétences/competences.html">COMPETENCES</a></li>
+                <li><a href="./productions.html">PRODUCTIONS</a></li>
+            </ul>
+        </nav>
+    </div>
+    <section class="portfolio">
+        <h2 class="petit-texte"> Mes Productions</h2>
+
+                <!-- Selection Tags for Work Categories REMETTRE EN LONGUEUR, pas que "diagnostic de territoire soit en 2 lignes"-->
+            <div class="tag-selection">
+                <input type="button" id="afficherTypeTout" value="Tous mes travaux"/>
+                <input type="button" id="afficherTypeCarto" value="Cartographies" src="icones_cartes.png"/>
+                <input type="button" id="afficherTypePoster" value="Infographies et poster"/>
+                <input type="button" id="afficherTypeDiag" value="Diagnostic de territoire"/>
+                <input type="button" id="afficherTypeR" value="Programmation R"/>
+                <input type="button" id="afficherTypeTerrain" value="Terrain et techniques d'enquêtes"/>
+                <input type="button" id="afficherTypePhoto" value="Dossier photographique"/>
+            </div>
+    
+            <div class="modal" id="imageModal">
+                <div class="modal-content">
+                    <span class="close">×</span>
+                    <img id="modalImage" src="" alt="Document Image">
+                    <p id="modalText" class="modal-text"></p>
+                </div>
+            </div>
+    
+            <div class="portfolio-items">
+    
+                <!-- Premier projet -->
+                <div class="carto">
+                <div class="portfolio-item">
+                    <div class="carousel" id="carousel-1" data-index="0">
+                        <!-- Ajoute plusieurs images que possible pour chaque projet -->
+                        <img src="1741777462210-bb01c665-cd4f-42e4-9be6-d9483316d18f_1.jpg" alt="Projet 1 - Aspect 1" data-title="Première page" class="carousel-image active">
+                        <img src="img/densite_haies_calvados.png" alt="Projet 1 - Aspect 2" data-title="Densité de haies Calvadosclass" class="carousel-image">
+                        <img src="img/densite_haies_cingal_suisse_Normande.png" alt="Projet 1 - Aspect 3" data-title="Densité de haies Cingal-Suisse-Normande" class="carousel-image">
+                        <img src="img/carte_de_localisation.png" alt="Projet 1 - Aspect 4" data-title="carte_de_localisation" class="carousel-image">
+                        <img src="img/présentation_clécy.png" alt="Projet 1 - Aspect 5" data-title="présentation_clécy" class="carousel-image">
+                        <img src="img/carte_1971.png" alt="Projet 1 - Aspect 6" data-title="carte_1971" class="carousel-image">
+                        <img src="img/carte_1998.png" alt="Projet 1 - Aspect 7" data-title="carte_1998" class="carousel-image">
+                        <img src="img/carte_2015.png" alt="Projet 1 - Aspect 8" data-title="carte_2015" class="carousel-image">
+                        <img src="img/obstruction_route.png" alt="Projet 1 - Aspect 9" data-title="Obstruction route Clécy" class="carousel-image">
+                        <!-- Autres images -->
+                        <button class="carousel-arrow left">❮</button>
+                        <button class="carousel-arrow right">❯</button>
+                    </div>    
+                    <div>
+                    <a href="RenduV8paysage_CC_07_02_.pdf" target="_blank">
+                    <h3>Analyse spatiale des haies à différentes échelles dans le Calvados📖</h3>
+                    </a>
+                    <p>Cartographies</p>
+                    </div>
+                </div>
+                </div>
+    
+                <!-- deuxième projet -->
+                <div class="carto">
+                <div class="portfolio-item">
+                    <div class="carousel" id="carousel-2" data-index="0">
+                        <!-- Ajoute plusieurs images que possible pour chaque projet -->
+                        <img src="1741777538379-537f34b1-a125-468d-852d-4de8ba038f86_1.jpg" alt="Projet 2 - Aspect 1" data-title="Première page" class="carousel-image active">
+                        <img src="img/densite_ha_par_iris.png" alt="Projet 2 - Aspect 2" data-title="Densité de population par hectare au sein des IRIS" class="carousel-image">
+                        <img src="img/pop_batiment.png" alt="Projet 2 - Aspect 3" data-title="population par bâtiment à Paris" class="carousel-image">
+                        <img src="img/espace_vert_dans_paris_et_population_isochrome.png" alt="Projet 2 - Aspect 4" data-title="Les isochrones à partir des espaces verts" class="carousel-image">
+                        <button class="carousel-arrow left">❮</button>
+                        <button class="carousel-arrow right">❯</button>
+                    </div>
+                    <div>
+                    <a href="rendu_cc_geoprocessing_mm.pdf" target="_blank">
+                    <h3>Analyse spatiale et gestion de données de la population à Paris📖</h3>
+                    </a>
+                    <p>Cartographies</p>
+                    </div>
+                </div>
+                </div>
+    
+                <!-- troisème projet -->
+                <div class="poster">
+                <div class="portfolio-item">
+                    <div>
+                        <!-- Ajoute plusieurs images que possible pour chaque projet -->
+                        <img src="Poster VT - BTv2.png" alt="Projet 3 - Aspect 1">
+                    </div>
+                    <div>
+                    <h3>Incendies de forêts en France (2010 - 2023) : Une menace croissante /
+                        Analyse des causes, impacts et prévention avec un focus sur la région Provence-Alpes-Côte d'Azur
+                    </h3>
+                    <p>Infographies et posters</p>
+                    </div>
+                </div>
+                </div>
+    
+                
+                <!-- quatrième projet -->
+                <div class="diag">
+                <div class="portfolio-item">
+                    <div class="carousel" id="carousel-3"> 
+                        <!-- Ajoute autant d'images que nécessaire pour chaque projet -->
+                        <img src="img/0.jpg"  alt="Projet 4 - Aspect 1" class="carousel-image active">
+                        <img src="img/localisation_cc_de_comparaison.png"  alt="Projet 4 - Aspect 2" class="carousel-image">
+                        <img src="img/refonte_carte_ivV2.png" alt="Projet 4 - Aspect 3" class="carousel-image">
+                        <img src="img/carte_propriétaire_refonte.png" alt="Projet 4 - Aspect 4" class="carousel-image">
+                        <img src="img/carte_ratio_cadre_ouvrier_refonte.png" alt="Projet 4 - Aspect 5" class="carousel-image">
+                        <img src="img/carte revenu médian refonte.png" alt="Projet 4 - Aspect 6" class="carousel-image">
+                        <button class="carousel-arrow left">❮</button>
+                        <button class="carousel-arrow right">❯</button>
+                    </div>
+                    <div>
+                    <a href="Diag compressé.pdf" target="_blank">
+                    <h3>Diagnostic de territoire Communauté de communes Seulles Terre & Mer📖</h3>
+                    </a>
+                    <p>Diagnostic de territoire</p>
+                    </div>
+                </div>
+                </div>
+    
+                <!-- cinquième projet -->
+                <div class="r">
+                <div class="portfolio-item">
+                    <div>
+                        <!-- Ajoute plusieurs images que possible pour chaque projet -->
+                        <img src="" alt="Projet 5 - Aspect 1">
+                    </div>
+                    <div>
+                    <a href="https://vincenttillard.github.io/Detection_Ecotone_LIDAR/" target="_blank">
+                    <h3>Détection des écotones avec LIDAR📖</h3>
+                    </a>
+                    <p>Programmation R</p>
+                    </div>
+                </div>
+                </div>
+    
+                <!-- sixième projet -->
+                <div class="terrain">
+                <div class="portfolio-item">
+                    <div>
+                    <a href="T.Bucaille et M.Portier - Dossier 4 pages .pdf" target="_blank">
+                    <h3>Un lien étroit entre logement étudiant et situation familiale ?📖</h3>
+                    </a>
+                    <p>Terrain et techniques d'enquêtes</p>
+                    </div>
+                </div>
+                </div>
+        
+                <!-- septième projet -->
+                <div class="terrain">
+                <div class="portfolio-item">
+                    <div>
+                    <a href="Dossier final - entretien.pdf" target="_blank">
+                    <h3>Dossier 10 pages entretiens📖</h3>
+                    </a>
+                    <p>Terrain et techniques d'enquêtes</p>
+                    </div>
+                </div>
+                </div>
+    
+                <!-- huitième projet -->
+                <div class="photo">
+                <div class="portfolio-item">
+                    <div>
+                        <!-- Ajoute plusieurs images que possible pour chaque projet -->
+                        <img src="Dossier photographique de Bucaille Théo, Tillard Vincent et de Othon Frédérick-pages-1.jpg" alt="Projet 8 - Aspect 1">
+                    </div>
+                    <div>
+                    <a href="Dossier photographique de Bucaille Théo, Tillard Vincent et de Othon Frédérick.pdf" target="_blank">
+                    <h3>Le quotidien d’un étudiant dans son habitat pavillonnaire, capturé sous un regard photographique📖</h3>
+                    </a>
+                    <p>Dossier photographique</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <script src="../script.js"></script>
+</body>
