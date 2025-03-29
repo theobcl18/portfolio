@@ -308,7 +308,7 @@ input{
     padding: 0.6rem 1rem;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1.7rem;
+    font-size: 2rem;
     text-align: center;
     max-width: 100%;
     box-sizing: border-box;
@@ -343,6 +343,7 @@ input:hover{
 /* Élément individuel du portfolio */
 .portfolio-item {
     /*flex-shrink: 0; /* Empêche les éléments de rétrécir */
+    align-items: center; /* Centre les éléments */
     background: #ffffff;
     padding: 10px;
     border-radius: 10px;
@@ -350,13 +351,14 @@ input:hover{
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     transform: scale(1); /* Taille normale */
     margin: 0 auto; /* Centrer les éléments */
-    font-size: 1.5rem;
+    font-size: 1,5rem;
     overflow: hidden;
     width: 100%;
     box-sizing: border-box;
-    height: 1500px; /* Définir une hauteur uniforme */
+    height: auto; /* Définir une hauteur uniforme */
     transition: all 0.3s ease-in-out;
     max-width: 1500px; /* Ajuste la taille max */
+    margin-bottom: 50px;
 }
 
 /* Style pour les images des éléments du portfolio */
@@ -393,39 +395,46 @@ img.posterfeu {
 }
 
 /* Titre de chaque projet dans le portfolio */
-.portfolio-item h3 {
+.portfolio-item h2 {
     margin: 2rem; /* Ajoute un peu d'espace au-dessus et en dessous du titre */
-    font-size: 16px;
     color: #000000;
-    font-weight: 500;
+    font-weight: bold;
     text-decoration: none !important; /* Supprime le soulignement */
     display: inline-block !important; /* Supprime le soulignement */
 }
 
-/* .portfolio-item h3::after {
-    content: " 📄";  Ajoute une icône de document 
-    font-size: 1.2rem;     Est utilisé quand tous les h3 ont un lien mais pas ici !!
-}*/ 
+/* description de la production */
+.portfolio-item h3 {
+    margin: 2rem; /* Ajoute un peu d'espace au-dessus et en dessous du titre */
+    font-size: 16px;
+    color: #000000;
+    font-weight: normal;
+    text-decoration: none !important; /* Supprime le soulignement */
+    display: inline-block !important; /* Supprime le soulignement */
+}
 
 /* titre de la catégorie (Carto, poster, terrain, diag etc) sous chaque projet */
 .portfolio-item p {
+    margin-top: 10rem; /* Ajoute un espace entre l'image et le texte */
     color: #5f5f5f;
     text-decoration: none;
     position: absolute;
-    bottom: 8px; /* Ajuste selon l'espace nécessaire */
+    bottom: 8px;
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
     text-align: center;
-    background: rgba(255, 255, 255, 0.8); /* Fond léger pour la lisibilité */
+    background: #ffffffcc; /* Fond léger pour la lisibilité */
     padding: 5px;
     border-radius: 5px;
+    text-decoration: none !important;
+    display: inline-block !important; /* Supprime le soulignement */
 }
 
-.portfolio-item h3 a,
-.portfolio-item h3 a:visited,
-.portfolio-item h3 a:hover,
-.portfolio-item h3 a:focus {
+.portfolio-item p a,
+.portfolio-item p a:visited,
+.portfolio-item p a:hover,
+.portfolio-item p a:focus {
     text-decoration: none !important;
     color: inherit !important;
     background: none !important;
