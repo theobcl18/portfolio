@@ -363,9 +363,14 @@ input:hover{
 .portfolio-item img {
     width: 100%; /* S'assurer que l'image occupe toute la largeur de l'élément */
     height: 450px; 
-    /* object-fit: cover; */
     cursor: pointer;
     object-fit: contain; /* Garantit que toute l'image est visible sans recadrage */
+}
+
+img.posterfeu {
+    width: 100%; /* S'assurer que l'image occupe toute la largeur de l'élément */
+    height: 850px; 
+    object-fit: contain;
 }
 
 /* Effet au survol des éléments du portfolio */
@@ -380,12 +385,11 @@ input:hover{
     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
 }
 
-
 .portfolio-item embed{
     width: 100%;
-    height: 40vw;
-    padding: 10px 0; 
-    border-radius: 1vw;
+    height: 800px;
+    padding: 8px 0; 
+    border-radius: 25px;
 }
 
 /* Titre de chaque projet dans le portfolio */
