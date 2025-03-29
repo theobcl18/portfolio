@@ -354,7 +354,7 @@ input:hover{
     overflow: hidden;
     width: 100%;
     box-sizing: border-box;
-    height: 1700px; /* Définir une hauteur uniforme */
+    height: 1500px; /* Définir une hauteur uniforme */
     transition: all 0.3s ease-in-out;
     max-width: 1500px; /* Ajuste la taille max */
 }
@@ -378,7 +378,6 @@ input:hover{
 .portfolio-item.active {
     /*height: 700px; /* Taille agrandie */
     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
-    transform: scale(1.1); /* Légèrement plus grand */
 }
 
 
