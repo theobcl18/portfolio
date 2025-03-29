@@ -81,10 +81,8 @@ ul a{
 
 
 div.boite{
-    /* background-color: red; */
     backdrop-filter: blur(10px);
     width: 65%;
-    /* height: 900px; */
     border-radius: 3vw;
     color: white;
     margin-bottom: 30px;
@@ -93,7 +91,6 @@ div.boite{
 }
 
 section.titre{
-    /* background-color: red; */
     position: sticky;
     width: 100%;
     height: auto;
@@ -114,7 +111,6 @@ hr.titre_dessus{
 
 
 .titre h1{
-    /* background-color: yellow; */
     font-size: 40px;
     font-weight: bold;
     text-align: center;
@@ -147,12 +143,11 @@ hr.titre_dessus{
 }
 
 .logos{
-    width: 80%;
-    /* background-color: red; */
+    width: 70%;
     overflow: hidden;
     padding: 60px 0 20px 0;
     white-space: nowrap;
-    align-self: center;
+    align-self: centermm;
 }
 
 
@@ -334,7 +329,6 @@ div.item{
 
 section.bouton {
     position: relative;
-    /* background-color: yellow; */
     width: 100%;
     height: 85px;
     display: flex;

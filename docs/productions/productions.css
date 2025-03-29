@@ -69,7 +69,7 @@ body {
 .portfolio {
     border: 2px solid #484e5e; /* Pour voir les limites visuelles */
     margin-top: 20px; /* Espacement en haut pour éviter que le contenu soit masqué par le container */
-    padding: 40px 10%; /* Padding adapté à votre design */
+    padding: 1px 1%; /* Padding adapté à votre design */
     color: #feffff; /* blanc pour le texte */
     background: #d9d9d9; /* truc moche */  
     text-align: center;
@@ -78,7 +78,7 @@ body {
     border-radius: 15px;
     display: flex;
     flex-direction: column; /* S'assure que les éléments s'empilent verticalement */
-    gap: 2rem;
+    gap: 1rem;
     max-width: 100%;
     /* overflow: hidden; /* Coupe les débordements internes */
     box-sizing: border-box; /* Pour que padding + border soient inclus dans la taille */
@@ -86,17 +86,16 @@ body {
 
 /* Titre de la section Portfolio */
 .petit-texte{          /* "Mes Productions" */
-    font-size: 40px;
-    font-weight: 500;
-    /* color: #343a3f; /* Noir doux */
+    font-weight: 300;
     margin-bottom: 20px;
+    margin-top: 20px !important;
     padding: 10px; /* Espacement autour du texte */
     background-color: #484e5e ; /* Fond  */
     color: #ffffff; /* Couleur du texte */
     border-radius: 8px; /* Coins arrondis */
-    display: inline-block; /* S'assure que le fond ne s'étend pas sur toute la largeur */
-    max-width: 100%;
-    box-sizing: border-box;
+    display: block; /* S'assure que le fond ne s'étend pas sur toute la largeur */
+    width: 470px; /* Ajuste la largeur au texte */
+    margin: 0 auto; /* Centre horizontalement */
 }
 
 .tag-selection {
@@ -114,10 +113,10 @@ input{
     background-color: #abafbb;
     color: #000000;
     justify-content: center; /* Centre le texte horizontalement */
-    padding: 0.4rem 0.8rem;
+    padding: 0.6rem 1rem;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     text-align: center;
     max-width: 100%;
     box-sizing: border-box;
@@ -136,16 +135,18 @@ input:hover{
 /* Liste des éléments du portfolio */
 .portfolio-items {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem; /* Espacement entre les éléments */
+    grid-template-columns: 1fr; /* Une seule colonne par défaut */
+    gap: 0.5rem; /* Espacement entre les éléments */
     /*overflow: hidden; /* Défilement */
     /* padding-bottom: 10px; /* Espacement au bas pour éviter que les éléments soient collés */
     /*max-width: 100%; /* Utiliser toute la largeur disponible */
-    /*height: 80vh; /* Ajuster la hauteur de la section des éléments du portfolio */
+    /* height: 80vh; /* Ajuster la hauteur de la section des éléments du portfolio */
     width: 100%; /* S'assure que la grille respecte les limites */
     box-sizing: border-box; /* Pour éviter que les paddings ajoutent de la largeur */
-    grid-auto-rows: minmax(250px, auto); /* Hauteur minimale, s'ajuste si le contenu est plus grand */
+    overflow: hidden; /* Empêche le débordement visuel */
 }
+
+
 
 /* Élément individuel du portfolio */
 .portfolio-item {
@@ -156,22 +157,28 @@ input:hover{
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     transform: scale(1); /* Taille normale */
-    /*margin: 0 auto; /* Centrer les éléments */
+    margin: 0 auto; /* Centrer les éléments */
     font-size: 1.5rem;
     overflow: hidden;
     width: 100%;
     box-sizing: border-box;
-    height: 500px; /* Définir une hauteur uniforme */
+    height: 1500px; /* Définir une hauteur uniforme */
     transition: all 0.3s ease-in-out;
+    max-width: 1500px; /* Ajuste la taille max */
 }
 
 /* Style pour les images des éléments du portfolio */
 .portfolio-item img {
     width: 100%; /* S'assurer que l'image occupe toute la largeur de l'élément */
-    height: 300px; 
-    /* object-fit: cover; */
+    height: 450px; 
     cursor: pointer;
     object-fit: contain; /* Garantit que toute l'image est visible sans recadrage */
+}
+
+img.posterfeu {
+    width: 100%; /* S'assurer que l'image occupe toute la largeur de l'élément */
+    height: 850px; 
+    object-fit: contain;
 }
 
 /* Effet au survol des éléments du portfolio */
@@ -180,11 +187,17 @@ input:hover{
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
-/* Quand un élément est actif (cliqué) */
+/* Quand un élément est actif (cliqué), ne fonctionne pas ???????*/
 .portfolio-item.active {
     /*height: 700px; /* Taille agrandie */
     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
-    transform: scale(1.2); /* Légèrement plus grand */
+}
+
+.portfolio-item embed{
+    width: 100%;
+    height: 800px;
+    padding: 8px 0; 
+    border-radius: 25px;
 }
 
 /* Titre de chaque projet dans le portfolio */
@@ -204,10 +217,17 @@ input:hover{
 
 /* titre de la catégorie (Carto, poster, terrain, diag etc) sous chaque projet */
 .portfolio-item p {
-    font-size: 12px;
-    color: #000000;
-    /* margin: 0px; /* Ajoute un peu d'espace au-dessus et en dessous du titre */
+    color: #5f5f5f;
     text-decoration: none;
+    position: absolute;
+    bottom: 8px; /* Ajuste selon l'espace nécessaire */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8); /* Fond léger pour la lisibilité */
+    padding: 5px;
+    border-radius: 5px;
 }
 
 .portfolio-item h3 a,
