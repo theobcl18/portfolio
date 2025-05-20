@@ -8,7 +8,6 @@
 }
 
 body{
-    /* background-color: rgb(212, 140, 140); */
     background-color: #e8edee;
 }
 
@@ -71,7 +70,6 @@ ul a{
 
 
 div.boite{
-    /* background-color: red; */
     backdrop-filter: blur(10px);
     width: 65%;
     /* height: 900px; */
@@ -83,7 +81,6 @@ div.boite{
 }
 
 div.presentation{
-    /* background-color: yellow; */
     padding-top: 10px;
     margin-bottom: 50px;
     width: 80%;
@@ -94,6 +91,7 @@ div.presentation{
 
 .presentation h1{
     font-size: calc(1rem + 0.45vw);
+    color: rgb(0, 0, 0);
 }
 
 section.titre{
@@ -115,12 +113,22 @@ hr.titre_dessus{
 }
 
 .titre h1{
-    /* background-color: yellow; */
     font-size: 40px;
     font-weight: bold;
     text-align: center;
     padding: 20px 10px;
-    color: white;
+    color: rgb(0, 0, 0);
+}
+
+
+.timeline-line {
+    position: absolute;
+    width: 2px;
+    background-color: rgb(255, 255, 255);
+    top: 0;
+    bottom: 0;
+    left: 30%;
+    z-index: 1;
 }
 
 div.tableau{
@@ -136,12 +144,25 @@ div.tableau{
 div.tableau h1 {
     font-size: calc(1em + 0.55vw);
     font-weight: bold;
+    color: rgb(0, 0, 0);
 }
 
 div.tableau h4 {
     width: 100%;
     font-size: calc(1em + 0.15vw);
     font-weight: 300;
+}
+
+div.item h4 {
+    font-weight: 300;
+    color: rgb(0, 0, 0);
+    width: 65%;
+    opacity: 1;
+    transform: translateX(20px);
+    transition: opacity 0.3s, transform 0.3s;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 10px;
 }
 
 div.item hr{
@@ -201,9 +222,28 @@ div.item hr{
     display: none;
 }
 
+div.item:hover h4 {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+}
+
+div.item::before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #0b8297;
+    border-radius: 50%;
+    left: 30%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
 .background{
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(15px);
     top: 0;
     left: 0;

@@ -12,7 +12,7 @@
 
 body{
     /* background-color: rgb(212, 140, 140); */
-    background-color: #e8edee;
+    background-color: #8d9fa2 ;
 }
 
 
@@ -83,6 +83,7 @@ ul a{
 div.boite{
     backdrop-filter: blur(10px);
     width: 65%;
+    /* height: 900px; */
     border-radius: 3vw;
     color: white;
     margin-bottom: 30px;
@@ -115,7 +116,7 @@ hr.titre_dessus{
     font-weight: bold;
     text-align: center;
     padding: 20px 10px;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 .container h1{
