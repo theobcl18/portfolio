@@ -6,35 +6,109 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="chrome-extension://emnoomldgleagdjapdeckpmebokijail/font/roboto-fonts.css" class="wtd-font">
-    <link rel="stylesheet" href="chrome-extension://emnoomldgleagdjapdeckpmebokijail/font/unbounded-fonts.css" class="wtd-font">
+    <title>Portfolio de Théo Bucaille</title>
 </head>
 
 <body>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&amp;display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  -->
 
-    <title>Portfolio de Théo Bucaille</title>
-
-
-    <header class="entetecontainer">
-
-        <div class="profile-container">
-            <h1>Théo Bucaille</h1>
-        </div>
-
-        <nav class="nav-links">
+    <header> 
+        <!-- <nav class="nav-links"> ajouter ce bloc a contact
             <a href="https://www.linkedin.com/in/th%C3%A9o-bucaille/" target="_blank" class="btn">LinkedIn</a>
             <a href="CV MASTER.pdf" target="_blank" class="btn">À propos (CV)</a>
             <a href="mailto:gtbe189@gmail.com" target="_blank" class="btn">Me contacter </a>
-        </nav>
-    
-    </header>
+        </nav> --> 
+        <div class="navbar">
+		    <div class="logo">
+                <a href="#">
+                <img id="scroll-logo" src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png" alt="Logo"/>
+                </a>
+            </div>
+		    <ul class="links">
+                <li><a href="lien site direct" aria-current="page"> 🏠︎ Accueil</a></li>
+                <li><a href="lien vers une page des services">Services</a></li>
+                <li><a href="travaux/travaux.html"> Portfolio</a></li>
+                <li><a href="profil/profil.html">Profil</a></li>
+                <li><a href="compétences/competences.html">Compétences</a></li>
+            </ul>					
+		    <div class="buttons">
+                <a target="_blank" href="lien vers une page contact" class="action-button contact"> Contact</a>
+                <a target="_blank" href="lien client login compte" class="action-button connection"> Mon Portail</a>
+            </div>
+		    <div class="burger-menu-button">			
+                <i class="fa-solid fa-bars"></i>
+		    </div>
+        </div>
 
+        <div class="burger-menu">
+        	<ul class="links">
+                <li><a href="lien site direct" aria-current="page">Accueil</a></li>
+                <li><a href="lien vers une page des services">Services</a></li>
+                <li><a href="lien vers la page portefeuille"> Portfolio</a></li>
+                <li><a href="profil/profil.html">Profil</a></li>
+                <li><a href="compétences/competences.html">Compétences</a></li>
+                <div class="divider"></div>
+                <div class="buttons-burger-menu">
+                    <a target="_blank" href="contact/contactezmoi.html" class="action-button contact"> Contact</a>
+                    <a target="_blank" href="lien client login compte" class="action-button connection"> Mon Portail</a>
+                </div>
+            </ul>	
+        </div>
+        
+	</header>
+
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const burgerMenuButton = document.querySelector('.burger-menu-button');
+    const burgerMenuButtonIcon = document.querySelector('.burger-menu-button i');
+    const burgerMenu = document.querySelector('.burger-menu');
+    const header = document.querySelector('header');
+
+    burgerMenuButton.onclick = function () {
+        burgerMenu.classList.toggle('open');
+        const isOpen = burgerMenu.classList.contains('open');
+        burgerMenuButtonIcon.className = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+    };
+
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+  });
+</script>
+
+<!--------------------------------------------------------MAIN------------------------------------------------------------------->
     <main>
+
+        <!---------------------------------Bannière d'introduction--------------------------->
+
+        <section class="page-banner"> 
+            <div class="overlay">
+                <h1 class="page-title">L'entreprise</h1>
+                <div class="slogan-box">
+                <p class="slogan">Entreprise spécialisée dans les Systèmes d’Information Géographique</p>
+                </div>
+                <p class="localisation">En Normandie et partout en France</p>
+            </div>
+
+            <!-- Délimitation fine décorative -->
+            <span class="banniere-delimitation">
+                <img src="/docs/img/dessin-banniere-delimitation.svg" alt="">
+            </span>
+        </section>
+
+
+        <!---------------------------------Section Portfolio----------------------------------------->
+
         <section1 class="intro">
             <!--<hr class="titre_dessus"> -->
             <h2>Bienvenue sur mon portfolio !</h2>
@@ -48,24 +122,12 @@
             <br> Si toi aussi tu aimes les cartes, l’aménagement du territoire ou simplement découvrir le monde autrement, alors bienvenue ! Je t’invite à jeter un œil à quelques-unes de mes réalisations ci-dessous.
             <br> À très vite pour échanger sur ce beau voyage à travers l'espace et les données ! 🌎</p>
         </section2>
-  
-        <div class="navigation">
-            <nav id="nav">
-                <div id="icons"></div>
-                <div class="background"></div>
-                <ul>
-                    <li><a href="../index.html">MENU</a></li>
-                    <li><a href="profil/profil.html">PROFIL</a></li>
-                    <li><a href="compétences/competences.html">COMPETENCES</a></li>
-                </ul>
-            </nav>
-        </div>
 
-    <!-- Container for dynamically displayed work -->
+    <!----------- Container for dynamically displayed work -------------->
     <section class="portfolio">
         <h2 class="petit-texte"> Mes Productions</h2>
 
-            <!-- Selection Tags for Work Categories REMETTRE EN LONGUEUR, pas que "diagnostic de territoire soit en 2 lignes"-->
+            <!------------------- Selection Tags for Work Categories-------------------------->
         <div class="tag-selection">
 			<input type="button" id="afficherTypeTout" value="Tous mes travaux 🌍"/>
 			<input type="button" id="afficherTypeCarto" value="Cartographies 🗺️"/>
@@ -256,7 +318,6 @@
     </section>
 
     </main>
-    <canvas id="canvas"></canvas>
 
     <script src="script.js"></script>
     <div class="modal" style="display: none;">
@@ -267,11 +328,46 @@
         </div>
     </div>
 
+    <span class="et_pb_scroll_top et-pb-icon et-visible" style="display: inline;"></span> <!--ajout ??-->
 
-</body>
+
+
+<!------------------------------------------------FOOTER------------------------------------------------------>
 
     <footer>
-        <p>&copy; 2025 Théo Bucaille. Tous droits réservés.</p>
-    </footer>
+		<div class="contenu-footer">
+            <div class="bloc footer-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png" alt="Logo" class="footer-logo-img">
+            </div>
+			<div class="bloc footer-entreprise">
+                <div class="entreprise-texte">
+                    <h4>Entreprise spécialisée dans les Systèmes d’Information Géographique</h4>
+                </div>
+                <div class="lien-social">
+                    <ul class="li-logo-footer">
+                        <li class="social-linkedin"><a target="_blank" href="https://www.linkedin.com/in/th%C3%A9o-bucaille/"><img src="https://cdn-icons-png.flaticon.com/128/3938/3938044.png" title="Suivez sur LinkedIn"></a></li>
+                        <li class="social-github"><a target="_blank" href=""><img src="https://cdn-icons-png.flaticon.com/128/270/270798.png" title="Suivez sur GitHub"></a></li>
+                    </ul>
+                </div>
+			</div>
+            <div class="bloc footer-contact">
+                <div class="contact-texte"><h3>CONTACT</h3></div>
+                <div class="mail-tel">
+                    <p> 📧 Mail : <a href="mailto:gtbe189@gmail.com">gtbe189@gmail.com</a></p>
+                    <p>☎ Tel : 06 10 29 11 37</p>
+                    <a href="CV MASTER.pdf" target="_blank"> 📃 À propos (CV)</a>
+                </div>
+			</div>
+            <div class="bloc footer-portail">
+                <div class="portail-texte"><h3>CONNEXION</h3></div>
+                    <div class="et_pb_text_inner"><p><a href="" target="_blank" rel="noopener">Accédez à votre compte sur le portail</a></p></div>
+			    </div>
+            </div>
+            <div class="mentions">
+                <p>Tous droits réservés à .... 2025 | <a href="">Mentions légales Données personnelles et Cookies</a> | Site réalisé par Bucaille Théo</p>
+			</div>
+		</div>
+	</footer>
 
+</body>
 </html>

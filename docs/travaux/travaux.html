@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en"> 
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&amp;display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  -->
+
+    <header> 
+        <!-- <nav class="nav-links"> ajouter ce bloc a contact
+            <a href="https://www.linkedin.com/in/th%C3%A9o-bucaille/" target="_blank" class="btn">LinkedIn</a>
+            <a href="CV MASTER.pdf" target="_blank" class="btn">À propos (CV)</a>
+            <a href="mailto:gtbe189@gmail.com" target="_blank" class="btn">Me contacter </a>
+        </nav> --> 
+        <div class="navbar">
+		    <div class="logo">
+			    <a href="#" nom>
+			    </a>
+		    </div>
+		    <ul class="links">
+                <li><a href="lien site direct" aria-current="page">Accueil</a></li>
+                <li><a href="lien vers une page des services">Services</a></li>
+                <li><a href="lien vers la page portefeuille"> Portfolio</a></li>
+                <li><a href="profil/profil.html">Profil</a></li>
+                <li><a href="compétences/competences.html">Compétences</a></li>
+            </ul>					
+		    <div class="buttons">
+                <a target="_blank" href="lien vers une page contact" class="action-button contact"> Contact</a>
+                <a target="_blank" href="lien client login compte" class="action-button connection"> Mon Portail</a>
+            </div>
+		    <div class="burger-menu-button">			
+                <i class="fa-solid fa-bars"></i>
+		    </div>
+        </div>
+
+        <div class="burger-menu">
+        	<ul class="links">
+                <li><a href="lien site direct" aria-current="page">Accueil</a></li>
+                <li><a href="lien vers une page des services">Services</a></li>
+                <li><a href="lien vers la page portefeuille"> Portfolio</a></li>
+                <li><a href="profil/profil.html">Profil</a></li>
+                <li><a href="compétences/competences.html">Compétences</a></li>
+                <div class="divider"></div>
+                <div class="buttons-burger-menu">
+                    <a target="_blank" href="contact/contactezmoi.html" class="action-button contact"> Contact</a>
+                    <a target="_blank" href="lien client login compte" class="action-button connection"> Mon Portail</a>
+                </div>
+            </ul>	
+        </div>
+        
+	</header>
+
+    <script>
+        const burgerMenuButton = document.querySelector('.burger-menu-button')
+        const burgerMenuButtonIcon = document.querySelector('.burger-menu-button i')
+        const burgerMenu = document.querySelector('.burger-menu')
+
+        burgerMenuButton.onclick = function() {
+            burgerMenu.classList.toggle('open')
+            const isOpen = burgerMenu.classList.contains('open')
+            burgerMenuButtonIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'
+        }
+    </script>
+
+<!--------------------------------------------------------MAIN------------------------------------------------------------------->
+    <main>
+        <section1 class="intro">
+            <!--<hr class="titre_dessus"> -->
+            <h2>Bienvenue sur mon portfolio !</h2>
+        </section1>
+
+        <section2 class="intro">
+            <p> Bienvenue dans mon univers géographique ! Moi, c'est Théo Bucaille, captivé par la géographie et les Systèmes d’Information Géographique (SIG) ! Actuellement en licence pro SIGDAT à l’université de Caen Normandie 🎓, je plonge chaque jour un peu plus dans l’univers de la cartographie et de l’analyse spatiale.
+
+            <br> Toujours curieux et avide de nouvelles connaissances, je ne compte pas m’arrêter là ! Mon objectif ? Un master en géomatique pour affiner mes compétences, explorer de nouveaux horizons et continuer à travailler avec les données géographiques.
+                
+            <br> Si toi aussi tu aimes les cartes, l’aménagement du territoire ou simplement découvrir le monde autrement, alors bienvenue ! Je t’invite à jeter un œil à quelques-unes de mes réalisations ci-dessous.
+            <br> À très vite pour échanger sur ce beau voyage à travers l'espace et les données ! 🌎</p>
+        </section2>
+
+    <!----------- Container for dynamically displayed work -------------->
+    <section class="portfolio">
+        <h2 class="petit-texte"> Mes Productions</h2>
+
+            <!------------------- Selection Tags for Work Categories-------------------------->
+        <div class="tag-selection">
+			<input type="button" id="afficherTypeTout" value="Tous mes travaux 🌍"/>
+			<input type="button" id="afficherTypeCarto" value="Cartographies 🗺️"/>
+            <input type="button" id="afficherTypePoster" value="Infographies et poster 🖼️"/>
+			<input type="button" id="afficherTypeDiag" value="Diagnostic de territoire 🔎"/>
+            <input type="button" id="afficherTypeR" value="Programmation R 🖥"/>
+            <input type="button" id="afficherTypeTerrain" value="Terrain et techniques d'enquêtes 🕵️"/>
+            <input type="button" id="afficherTypePhoto" value="Dossier photographique 📷"/>
+        </div>
+
+        <div class="modal" id="imageModal">
+            <div class="modal-content">
+                <span class="close">×</span>
+                <img id="modalImage" src="" alt="Document Image">
+                <p id="modalText" class="modal-text"></p>
+            </div>
+        </div>
+
+        <div class="portfolio-items">
+
+            <!-- Premier projet -->
+			<div class="carto">
+            <div class="portfolio-item">
+                <div>
+                    <a href="RenduV8paysage_CC_07_02_.pdf" target="_blank">
+                    <h2> Analyse spatiale détaillée de la commune de Clécy et de son environnement 📖 - Lpro </h2>
+                    <h3> Ce dossier présente une analyse spatiale de la commune de Clécy à travers plusieurs études thématiques en SIG et cartographie. Il examine la densité des haies, la répartition du réseau hydrographique et des vergers, ainsi que l’évolution des paysages entre 1971 et 2015. Une analyse du risque d’obstruction routière par chute d’arbres complète l’étude. Ces travaux offrent des outils d’aide à la décision pour la gestion du territoire et l’aménagement local.</h3>
+                    </a>
+                    <p>Cartographies</p>
+                </div>
+                <div class="carousel" id="carousel-1" data-index="0">
+                    <!-- Ajoute plusieurs images que possible pour chaque projet -->
+                    <img src="1741777462210-bb01c665-cd4f-42e4-9be6-d9483316d18f_1.jpg" alt="Projet 1 - Aspect 1" data-title="Première page" class="carousel-image active">
+                    <img src="img/densite_haies_calvados.png" alt="Projet 1 - Aspect 2" data-title="Densité de haies Calvadosclass" class="carousel-image">
+		            <img src="img/densite_haies_cingal_suisse_Normande.png" alt="Projet 1 - Aspect 3" data-title="Densité de haies Cingal-Suisse-Normande" class="carousel-image">
+                    <img src="img/carte_de_localisation.png" alt="Projet 1 - Aspect 4" data-title="carte_de_localisation" class="carousel-image">
+		            <img src="img/présentation_clécy.png" alt="Projet 1 - Aspect 5" data-title="présentation_clécy" class="carousel-image">
+		            <img src="img/carte_1971.png" alt="Projet 1 - Aspect 6" data-title="carte_1971" class="carousel-image">
+		            <img src="img/carte_1998.png" alt="Projet 1 - Aspect 7" data-title="carte_1998" class="carousel-image">
+		            <img src="img/carte_2015.png" alt="Projet 1 - Aspect 8" data-title="carte_2015" class="carousel-image">
+		            <img src="img/obstruction_route.png" alt="Projet 1 - Aspect 9" data-title="Obstruction route Clécy" class="carousel-image">
+                    <!-- Autres images -->
+                    <button class="carousel-arrow left">❮</button>
+                    <button class="carousel-arrow right">❯</button>
+                </div>
+                <embed src="RenduV8paysage_CC_07_02_.pdf" type="application/pdf"/>
+            </div>
+			</div>
+
+            <!-- deuxième projet -->
+			<div class="carto">
+            <div class="portfolio-item">
+                <div class="texte">
+                    <a href="rendu_cc_geoprocessing_mm.pdf" target="_blank">
+                        <h2> Analyse de l’impact de la densification urbaine sur l’accessibilité aux espaces verts à Paris 📖 - Lpro</h2>
+                        <h3> À travers des outils SIG et des calculs d’isochrones piétons, ce projet met en évidence les inégalités spatiales et les tensions entre urbanisation et préservation de la nature. L’étude souligne la nécessité d’une planification urbaine équilibrée, intégrant des solutions innovantes comme la végétalisation des toits et les micro-forêts urbaines pour garantir un cadre de vie plus sain aux habitants.</h3>
+                    </a>
+                    <p>Cartographies</p>
+                </div>
+                <div class="carousel" id="carousel-2" data-index="0">
+                    <!-- Ajoute plusieurs images que possible pour chaque projet -->
+                    <img src="1741777538379-537f34b1-a125-468d-852d-4de8ba038f86_1.jpg" alt="Projet 2 - Aspect 1" data-title="Première page" class="carousel-image active">
+                    <img src="img/densite_ha_par_iris.png" alt="Projet 2 - Aspect 2" data-title="Densité de population par hectare au sein des IRIS" class="carousel-image">
+                    <img src="img/pop_batiment.png" alt="Projet 2 - Aspect 3" data-title="population par bâtiment à Paris" class="carousel-image">
+                    <img src="img/espace_vert_dans_paris_et_population_isochrome.png" alt="Projet 2 - Aspect 4" data-title="Les isochrones à partir des espaces verts" class="carousel-image">
+                    <button class="carousel-arrow left">❮</button>
+                    <button class="carousel-arrow right">❯</button>
+                </div>
+                <embed src="rendu_cc_geoprocessing_mm.pdf" type="application/pdf"/>
+			</div>
+			</div>
+
+            <!-- troisème projet -->
+			<div class="poster">
+            <div class="portfolio-item">
+                <div>
+                    <h2>Incendies de forêts en France (2010 - 2023) : Une menace croissante /
+                    Analyse des causes, impacts et prévention avec un focus sur la région Provence-Alpes-Côte d'Azur - Lpro
+                    </h2>
+                    <p>Infographies et posters</p>
+                </div>
+                <div>
+                    <!-- Ajoute plusieurs images que possible pour chaque projet -->
+                    <a href="Poster VT - BTv2.png" alt="Projet 3 - Aspect 1" target="_blank">
+                    <img src="Poster VT - BTv2.png" alt="Projet 3 - Aspect 1" class="posterfeu">
+                    </a>
+                </div>
+            </div>
+            </div>
+
+            
+            <!-- quatrième projet -->
+			<div class="diag">
+            <div class="portfolio-item">
+                <div>
+                    <a href="Diag compressé.pdf" target="_blank">
+                    <h2>Diagnostic de territoire Communauté de communes Seulles Terre & Mer 📖 - Lpro</h2>
+                    </a>
+                    <p>Diagnostic de territoire</p>
+                </div>
+                <div class="carousel" id="carousel-3"> 
+                    <!-- Ajoute autant d'images que nécessaire pour chaque projet -->
+                    <img src="img/0.jpg"  alt="Projet 4 - Aspect 1" class="carousel-image active">
+                    <img src="img/localisation_cc_de_comparaison.png"  alt="Projet 4 - Aspect 2" class="carousel-image">
+                    <img src="img/refonte_carte_ivV2.png" alt="Projet 4 - Aspect 3" class="carousel-image">
+                    <img src="img/carte_propriétaire_refonte.png" alt="Projet 4 - Aspect 4" class="carousel-image">
+                    <img src="img/carte_ratio_cadre_ouvrier_refonte.png" alt="Projet 4 - Aspect 5" class="carousel-image">
+                    <img src="img/carte revenu médian refonte.png" alt="Projet 4 - Aspect 6" class="carousel-image">
+                    <button class="carousel-arrow left">❮</button>
+                    <button class="carousel-arrow right">❯</button>
+                </div>
+                <embed src="Diag compressé.pdf" type="application/pdf"/>
+            </div>
+			</div>
+
+            <!-- cinquième projet -->
+            <div class="r">
+            <div class="portfolio-item">
+                <div>
+                    <a href="https://vincenttillard.github.io/Detection_Ecotone_LIDAR/" target="_blank">
+                    <h2>Détection des écotones avec LIDAR 📖 - Lpro</h2>
+                    </a>
+                    <p>Programmation R</p>
+                </div>
+                <embed src="https://vincenttillard.github.io/Detection_Ecotone_LIDAR/" type="application/pdf"/>
+            </div>
+            </div>
+
+            <!-- sixième projet -->
+			<div class="terrain">
+            <div class="portfolio-item">
+                <div>
+                    <a href="T.Bucaille et M.Portier - Dossier 4 pages .pdf" target="_blank">
+                    <h2>Un lien étroit entre logement étudiant et situation familiale ? 📖 - L2</h2>
+                    </a>
+                    <p>Terrain et techniques d'enquêtes</p>
+                </div>
+                <div>
+                    <embed src="T.Bucaille et M.Portier - Dossier 4 pages .pdf" type="application/pdf"/>
+                </div>
+            </div>
+            </div>
+    
+            <!-- septième projet -->
+            <div class="terrain">
+            <div class="portfolio-item">
+                <div>
+                    <a href="Dossier final - entretien.pdf" target="_blank">
+                    <h2>Enquête avec des entretiens sur le logement étudiant 📖 - L2</h2>
+                    </a>
+                    <p>Terrain et techniques d'enquêtes</p>
+                </div>
+                <div>
+                    <embed src="Dossier final - entretien.pdf" type="application/pdf"/>
+                </div>
+            </div>
+            </div>
+
+            <!-- huitième projet -->
+            <div class="photo">
+            <div class="portfolio-item">
+                <div>
+                    <a href="Dossier photographique de Bucaille Théo, Tillard Vincent et de Othon Frédérick.pdf" target="_blank">
+                    <h2>Le quotidien d’un étudiant dans son habitat pavillonnaire, capturé sous un regard photographique 📖 - L2</h2>
+                    </a>
+                    <p>Dossier photographique</p>
+                </div>
+                    <embed src="Dossier photographique de Bucaille Théo, Tillard Vincent et de Othon Frédérick.pdf" type="application/pdf" alt="Projet 8 - Aspect 1"/>
+            </div>
+            </div>
+
+            <!-- neuvième projet -->
+            <div class="photo">
+            <div class="portfolio-item">
+                <div>
+                    <a href="img/BUCAILLE%20T%20-%20OTHON%20F%20L2MV.pdf" target="_blank">
+                    <h2>Analyse film 📖 - L2</h2>
+                    </a>
+                    <p>Dossier photographique</p>
+                </div>
+                <embed src="img/BUCAILLE%20T%20-%20OTHON%20F%20L2MV.pdf" type="application/pdf"/>
+            </div>
+            </div>
+
+            
+
+        </div>
+    </section>
+
+    </main>
+
+    <script src="script.js"></script>
+    <div class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">×</span>
+          <img id="modal-image" src="" alt="Document Image">
+          <p id="modal-text" class="modal-text"></p>
+        </div>
+    </div>
+
+    <span class="et_pb_scroll_top et-pb-icon et-visible" style="display: inline;"></span> <!--ajout ??-->
+
+
+
+<!------------------------------------------------FOOTER------------------------------------------------------>
+
+    <footer>
+		<div class="contenu-footer">
+			<div class="bloc footer-entreprise">
+                <div class="entreprise-texte">
+                    <h4>Entreprise spécialisée dans les Systèmes d’Information Géographique</h4>
+                </div>
+                <div class="lien-social">
+                    <ul class="li-logo-footer">
+                        <li class="social-linkedin"><a target="_blank" href="https://www.linkedin.com/in/th%C3%A9o-bucaille/"><img src="https://cdn-icons-png.flaticon.com/128/3938/3938044.png" title="Suivez sur LinkedIn"></a></li>
+                        <li class="social-github"><a target="_blank" href=""><img src="https://cdn-icons-png.flaticon.com/128/270/270798.png" title="Suivez sur GitHub"></a></li>
+                    </ul>
+                </div>
+			</div>
+            <div class="bloc footer-contact">
+                <div class="contact-texte"><h3>Contact</h3></div>
+                <div class="mail-tel">
+                    <p>Mail : <a href="mailto:gtbe189@gmail.com">gtbe189@gmail.com</a></p>
+                    <p>Tel : 06 10 29 11 37</p>
+                </div>
+			</div>
+            <div class="bloc footer-portail">
+                <div class="portail-texte"><h3>Connexion</h3></div>
+                    <div class="et_pb_text_inner"><p><a href="" target="_blank" rel="noopener">Accédez à votre compte sur le portail</a></p></div>
+			    </div>
+            </div>
+            <div class="et_pb_section et_pb_section_1_tb_footer et_pb_with_background et_section_regular et_had_animation" style="">
+                <div class="et_pb_text_inner"><p>Tous droits réservés à .... 2025 | <a href="">Mentions légales Données personnelles et Cookies</a> | Site réalisé par Bucaille Théo</p></div>
+			</div>
+		</div>
+	</footer>
+
+</body>
+</html>

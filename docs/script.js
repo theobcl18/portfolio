@@ -141,40 +141,40 @@ function actualiserAffichage() {
 
 
 // Création du modal pour l'affichage de l'image en plein écran
-const modal = document.createElement('div');
-modal.classList.add('modal');
-document.body.appendChild(modal);
+// const modal = document.createElement('div');
+// modal.classList.add('modal');
+// document.body.appendChild(modal);
 
 // Création du contenu du modal
-modal.innerHTML = `
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <img id="modal-image" src="" alt="Document Image">
-    <p id="modal-text" class="modal-text"></p>
-  </div>
-`;
+// modal.innerHTML = `
+  // <div class="modal-content">
+    // <span class="close">&times;</span>
+    // <img id="modal-image" src="" alt="Document Image">
+    // <p id="modal-text" class="modal-text"></p>
+  // </div>
+// `;// 
 
-// Sélection des éléments du modal
-const modalImage = modal.querySelector('#modal-image');
-const modalText = modal.querySelector('#modal-text');
-const closeModal = modal.querySelector('.close');
+// // Sélection des éléments du modal
+// const modalImage = modal.querySelector('#modal-image');
+// const modalText = modal.querySelector('#modal-text');
+// const closeModal = modal.querySelector('.close');
 
 // Fermeture du modal
-closeModal.addEventListener('click', () => {
-    modal.style.display = 'none';
-});
+// closeModal.addEventListener('click', () => {
+    // modal.style.display = 'none';
+// });
 
 // Fermeture du modal en cliquant en dehors du contenu
-window.addEventListener('click', (e) => {
-    if (e.target === modal) {
-        modal.style.display = 'none';
-    }
-});
+// window.addEventListener('click', (e) => {
+    // if (e.target === modal) {
+       //  modal.style.display = 'none';
+   //  }
+// });
 
 // Affichage immédiat des documents au chargement de la page
-document.addEventListener('DOMContentLoaded', function() {
-    filterDocs(); // Affiche tous les documents au chargement
-});
+// document.addEventListener('DOMContentLoaded', function() {
+    // filterDocs(); // Affiche tous les documents au chargement
+// });
 
 
 
