@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg1033"
+   inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
+   sodipodi:docname="logo-entreprise Carto &amp; To.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1035"
+     pagecolor="#000000"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="true"
+     inkscape:zoom="86.638359"
+     inkscape:cx="144.77421"
+     inkscape:cy="548.44068"
+     inkscape:window-width="2560"
+     inkscape:window-height="1334"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid22598" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1030">
+    <marker
+       style="overflow:visible"
+       id="DiamondS"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="DiamondS"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.2)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt"
+         d="M 0,-7.0710768 L -7.0710894,0 L 0,7.0710589 L 7.0710462,0 L 0,-7.0710768 z "
+         id="path21505" />
+    </marker>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 148.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="210 : 148.5 : 1"
+       inkscape:persp3d-origin="105 : 99 : 1"
+       id="perspective19798" />
+    <rect
+       x="103.66913"
+       y="525.41765"
+       width="75.541846"
+       height="31.502557"
+       id="rect3124" />
+  </defs>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="mix-blend-mode:darken">
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text3122"
+       style="font-size:14.6667px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';white-space:pre;shape-inside:url(#rect3124);fill:#ffffff"><tspan
+         x="103.66992"
+         y="538.76284"
+         id="tspan22618">Carto &amp; To</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:0.870588;stroke-width:0.564999"
+       id="rect18978"
+       width="1.8567603"
+       height="0.054969877"
+       x="37.220715"
+       y="144.77232"
+       ry="0.02748494" />
+    <rect
+       style="fill:#ffffff;fill-opacity:0.870588;stroke-width:0.411172"
+       id="rect18978-31"
+       width="0.98334998"
+       height="0.054969877"
+       x="128.60304"
+       y="76.244362"
+       ry="0.02748494"
+       transform="rotate(44.906492)" />
+    <rect
+       style="mix-blend-mode:darken;fill:#ffffff;fill-opacity:0.870588;stroke-width:0.411172"
+       id="rect18978-31-0"
+       width="1.4257114"
+       height="0"
+       x="129.08046"
+       y="76.834427"
+       ry="0"
+       transform="rotate(44.906492)" />
+    <ellipse
+       style="fill:#ffffff;fill-opacity:0.870588;stroke-width:0.564999"
+       id="path19415"
+       cx="38.350647"
+       cy="145.80455"
+       rx="0.47640559"
+       ry="0.45808229" />
+    <ellipse
+       style="fill:#0000ff;fill-opacity:0.870588;stroke-width:0.472843"
+       id="path20779"
+       cx="37.246674"
+       cy="144.79524"
+       rx="0.053443182"
+       ry="0.056502465" />
+    <ellipse
+       style="fill:#0000ff;fill-opacity:0.870588;stroke:#ffffff;stroke-width:0.00149366;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path20901"
+       cx="37.834545"
+       cy="145.40755"
+       rx="0.0520075"
+       ry="0.048953619" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;marker-mid:url(#DiamondS)"
+       d="m 37.834546,145.40754 0.965025,0.88563"
+       id="path21418" />
+  </g>
+</svg>

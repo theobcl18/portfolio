@@ -322,3 +322,112 @@ div.item::before {
         width: 90%;
     }
 }
+
+/* Section de la carte */
+    .section-carte {
+        margin: 40px 0;
+        padding: 0 20px;
+    }
+        
+    .section-carte .titre {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+        
+    .section-carte .titre h1 {
+        color: #333;
+        font-size: 2.2em;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+        
+    .section-carte .titre hr {
+        width: 200px;
+        height: 3px;
+        background: linear-gradient(90deg, #009999, #00cccc);
+        border: none;
+        margin: 0 auto 20px auto;
+        border-radius: 2px;
+    }
+        
+    /* Conteneur de la carte */
+    .carte-container {
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        margin: 0 auto;
+        max-width: 1000px;
+    }
+        
+    /* La carte elle-même */
+    #map-parcours {
+        height: 500px;
+        width: 100%;
+        border-radius: 15px;
+    }
+        
+    /* Styles pour les popups personnalisées */
+    .custom-popup .leaflet-popup-content-wrapper {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 15px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    }
+        
+    .custom-popup .leaflet-popup-content {
+        margin: 15px;
+        font-family: 'Arial', sans-serif;
+    }
+        
+    .custom-popup .leaflet-popup-tip {
+        background: #667eea;
+    }
+        
+    .popup-title {
+        font-size: 1.4em;
+        font-weight: bold;
+        margin-bottom: 10px;
+        text-align: center;
+        border-bottom: 2px solid rgba(255,255,255,0.3);
+        padding-bottom: 8px;
+    }
+        
+    .popup-content {
+        font-size: 1em;
+        line-height: 1.4;
+        margin-bottom: 12px;
+    }
+        
+    .popup-link {
+        display: inline-block;
+        background: rgba(255,255,255,0.2);
+        color: white;
+        padding: 8px 16px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        border: 1px solid rgba(255,255,255,0.3);
+    }
+        
+    .popup-link:hover {
+        background: rgba(255,255,255,0.3);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+        
+    /* Responsive */
+    @media (max-width: 768px) {
+        #map-parcours {
+            height: 400px;
+        }
+            
+        .section-carte {
+            padding: 0 10px;
+        }
+            
+        .section-carte .titre h1 {
+            font-size: 1.8em;
+        }
+    }

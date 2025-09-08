@@ -1,27 +1,313 @@
+
+/* Global styles */
+
 /* Reset les marges et les paddings par défaut */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
 /* Corps de la page */
 body {
-    background-color: #8d9fa2;
-    font-family: "Arial", "sans-serif"; 
-    font-size: 1.4rem;
+    height: 100vh;
+    /* background-image : url('https://breakingdefense.com/wp-content/uploads/sites/3/2023/01/NextGenOPIR_1600x900-1024x576.jpeg'); */
+    background-color: #3d3b3b;
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px; /* Hauteur du header */
+   /* font-size: 1.4rem;
     padding: 5rem;
-    overflow-x: hidden; /* Supprimer le défilement horizontal */
-    background-attachment: fixed;
+    overflow-x: hidden;  Supprimer le défilement horizontal 
     text-align: justify;
+    background-attachment: fixed;
     height: 100%; /* 100% de la hauteur de la page */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+html {
+    font-size: 65%;
+}
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+
+a:hover {
+    color: #0b8297;
+}
+
+
+/* ------------------------------------------------------------STYLE POUR LE HEADER --------------------------------------------------------- */
+
+
+header {
+    position: fixed; /* Fixe le header en haut */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: transparent; /* par défaut transparent */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+    background-size: 200% 200%;
+}
+
+header.scrolled {
+    background-color: rgba(0, 0, 0, 0.85);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+header.scrolled .logo img {
+    opacity: 1; /* affiché après scroll */
+}
+
+.logo img {
+    height: 40px;
+    transition: opacity 0.3s ease;
+    opacity: 0; /* caché par défaut */
+    filter: invert(100%);
+}
+
+.navbar .logo a {
+     font-size: 1.5rem;
+     font-weight: bold;
+}
+
+
+.navbar {
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1200px;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #c7c9d3; /*au survol du btn actif */
+    transform: scale(1.10); /* grossit au survol du btn actif */
+}
+
+.navbar .burger-menu-button {
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.buttons { 
+    display: flex;
+    gap: 10px;
+}
+
+.action-button {
+    background-color: #0b8297;
+    color: #000000;
+    border: 1px solid #0b8297;
+    padding: 0.5rem 1.2rem;
+    border-radius: 5px;
+    outline: none;
+    font-size: 0.9 rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.action-button:hover {
+    color: #ffffff;
+    border :1px solid #ffffff;
+}
+
+.contact {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
+
+.contact:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+
+
+/* -------------------------- BURGER MENU -------------------------------------- */
+
+.burger-menu {
+    display: none;
+    height: 0;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px);
+    overflow: hidden;
+    border-radius: 10px;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.burger-menu-button {
+    display: none;
+}
+
+.burger-menu.open {
+    display: block;
+    height: auto; /* Rend le contenu visible */
+}
+
+.burger-menu li {
+    padding: 0.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divider {
+    height: 1px;
+    background-color: #fff;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+}
+
+.burger-menu .action-button {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons-burger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+
+
+/* ---------------------------------- RESPONSIVE NAVBAR ---------------------------------------- */
+
+
+/* Media query pour les écrans plus petits */
+@media (max-width: 990px) {
+    header {
+        background-color: rgba(255, 255, 255, 0.427) !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar .links,
+    .navbar .action-button {
+        display: none;
+    }
+
+    .burger-menu-button { 
+        display: block;
+    }
+
+    .burger-menu-button i {
+        color: black;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+    /* Si ton logo est blanc et doit s’adapter */
+    .logo img {
+        filter: invert(0%);
+    }
+}
+
+@media (max-width: 768px) {
+  nav.active {
+    background-color: white;
+  }
+
+  nav.active a {
+    color: #222;
+  }
+}
+
+
+@media (max-width: 576px) {
+
+    .burger-menu {
+        left: 2rem;
+        width: unset;
+    }
+}
+
+/*
+.container.et_menu_container {
+    z-index: 99;
+}
+@media (max-width: 980px) {
+    #logo, .logo_container, #main-header, .container
+Specificity: (0,1,0)
+ {
+        -webkit-transition: none;
+        transition: none;
+    }
+}
+
+.container {
+    text-align: left;
+    position: relative;
+}
+.container {
+    width: 80%;
+    max-width: 1080px;
+    margin: auto;
+  m
+
+#main-header, #et-top-navigation {
+    font-family: 'Source Sans Pro', Helvetica, Arial, Lucida, sans-serif;
 }
 
 #main-header {
     line-height: 23px;
     font-weight: 500;
     top: 0;
-    background-color: #dde9f0;
+    background-color: #544a4a;
     width: 100%;
     -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, .1);
     box-shadow: 0 1px 0 rgba(0, 0, 0, .1);
@@ -29,55 +315,34 @@ body {
     z-index: 99999;
 }
 
-/* Pour que les boutons restent alignés horizontalement */
-.top-menu-nav {
+div.profile-container{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #1a1b1d;
+    padding-bottom: 1.8rem;
+}
+
+/* Structure de base 
+.entetecontainer {
     display: flex;
-    gap: 1.5rem;
-}
-
-/* Media query pour les écrans plus petits */
-@media (max-width: 768px) {
-    .entetecontainer {
-        flex-direction: column; /* Empile le titre et les boutons */
-        align-items: center; /* Centre le tout */
-        gap: 1.5rem; 
-    }
-
-    .top-menu-nav {
-        justify-content: center; /* Centre les boutons horizontalement */
-        flex-wrap: wrap; /* S'assure que les boutons restent alignés même si ça dépasse */
-    }
-}
-
-.top-menu-nav a:hover,
-.top-menu-nav a.active {
-    color: #c7c9d3; /*au survol du btn actif */
-    transform: scale(1.10); /* grossit au survol du btn actif */
-}
+    justify-content: space-between;  Sépare le titre et les boutons, positionne le nom à gauche et les boutons à droite
+    align-items: center;  Centre verticalement 
+    flex-wrap: wrap;  Permet le passage à la ligne si nécessaire 
+    gap: 2rem;
+} */
 
 
-.btn{ 
-    padding: 1rem 1.6rem;
-    font-size: 1.8rem;
-    color: #ffffff;
-    background-color:#0b8297;
-    border-radius: 15px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-    text-decoration: none;
-    border: 2px solid #ffffff; /* Ajout du contour blanc */
-}
-
+/* ------------------------------------------------------------ MAIN --------------------------------------------------------------- */
 
 
 main {
-    padding: 3rem;
+    padding: 2rem;
+    flex: 1 0 auto;
 }
 
 
 /* Bienvenue sur mon portfolio */
 h2{
-    color: #000000;
+    color: #ffffff;
     padding-bottom: 0rem;
     padding-top: 2rem;
 }
@@ -85,19 +350,177 @@ h2{
 p{
     padding-top: 3rem;
     padding-bottom: 3rem;
-    color: #454444;
+    color: #ffffff;
     line-height: 1.4; /* Pour améliorer la lisibilité à l'intérieur des paragraphes */
 }
 
 
 
-/* Section Portfolio */
+/* Menu profil et compétence en dessous le texte de présentation */
+div.navigation{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 0 20px 0;
+}
+
+nav{
+    width: 65%;
+    margin: 15px 0;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 20px;
+}
+
+.li {
+    list-style: none;
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    flex:1 0 10%;
+    text-align: center;
+    padding: 15px;
+    font-weight: 900;
+    border: 1px solid white;
+    box-sizing: unset;
+    background-color:#0b8297;
+}
+
+li:hover{
+    transition: 0.5s;
+    transform: scale(1.10); /* grossit au survol du btn actif */
+}
+
+li:hover a{
+    transition: 0.5s;
+    font-weight: 700;
+    color: #c7c9d3;
+}
+
+ul a{
+    font-weight: 500;
+    font-size: 1.8rem;;
+    text-decoration: none;
+    color: white;
+}
+
+
+/*
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}*/ 
+
+
+/* ----------------------------------------------------- BANNIERE D INTRODUCTION ---------------------------------------------------- */
+
+.page-banner {
+  position: relative;
+  width: 100vw;
+  height: 400px;
+  padding-bottom: 7rem; /* Ajoute assez d’espace sous la bannière */
+  padding-top: 7rem;
+  background: url('images/ta-carte.jpg') center center / cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: visible; /* Permet à la vague absolue de dépasser */
+  margin-bottom: 7rem; /* 👈 ajuste comme tu veux (ex: 50px) */
+}
+
+
+.overlay {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 5rem 2rem;
+    color: white;
+}
+
+.page-title {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #ff9100;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    margin-bottom: 1rem;
+}
+
+.slogan-box {
+    background-color: rgba(255, 255, 255, 0.25);
+    padding: 0.5rem 1.2rem;
+    margin: 0.5rem auto;
+    border-radius: 12px;
+    display: inline-block;
+    max-width: 90%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.slogan-box .slogan {
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.localisation {
+    font-size: 1.4rem;
+    color: white;
+    margin-top: 0.6rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Ligne décorative  */
+.banniere-delimitation {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  line-height: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.banniere-delimitation img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* ----------------------------------- RESPONSIVE BANNIERE ----------------------------------*/
+
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 2.5rem;
+  }
+
+  .slogan-box .slogan {
+    font-size: 1.2rem;
+  }
+
+  .localisation {
+    font-size: 1rem;
+  }
+}
+
+/* -------------------------------------------------------------------- SECTION PORTFOLIO ------------------------------------------------------------------*/
+
 .portfolio {
     border: 2px solid #484e5e; /* Pour voir les limites visuelles */
     margin-top: 20px; /* Espacement en haut pour éviter que le contenu soit masqué par le container */
     padding: 1px 1%; /* Padding adapté à votre design */
     color: #feffff; /* blanc pour le texte */
-    background: #d9d9d9; /* truc moche */  
+    background-color: rgba(116, 116, 116, 0.238);
     text-align: center;
     /*padding-top: 0rem; */
     min-height: 100vh;
@@ -116,8 +539,9 @@ p{
     margin-bottom: 20px;
     margin-top: 20px !important;
     padding: 10px; /* Espacement autour du texte */
-    background-color: #484e5e ; /* Fond  */
+    /* background-color: #484e5e ; /* Fond  */
     color: #ffffff; /* Couleur du texte */
+    font-weight: bold;
     border-radius: 8px; /* Coins arrondis */
     display: block; /* S'assure que le fond ne s'étend pas sur toute la largeur */
     width: 470px; /* Ajuste la largeur au texte */
@@ -136,8 +560,9 @@ p{
 }
 
 input{
-    background-color: #abafbb;
-    color: #000000;
+    background-color: #abafbb8d;
+    color: #fdfdfd;
+    font-weight: bold;
     justify-content: center; /* Centre le texte horizontalement */
     padding: 0.6rem 1rem;
     border-radius: 5px;
@@ -156,6 +581,16 @@ input:hover{
     transform: scale(1.05); /* grossit au survol du btn actif */
     transition: all 0.5s ease;
 }
+
+
+@media (max-width: 480px) {
+    .docs__tag {
+        font-size: 1.2rem;
+        padding: 0.4rem 0.8rem;
+        text-align: center;
+    }
+}
+
 
 
 /* Liste des éléments du portfolio */
@@ -274,6 +709,76 @@ img.posterfeu {
     background: none !important;
 }
 
+
+.footer {
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.footer .bas-page-footer {
+    color: #fff;
+}
+
+.hero .btn:hover {
+    background: #fff;
+}
+
+
+
+
+/* ---------------------------------- Modal Styles --------------------------------------- */
+.modal {
+    display: none; /* Masqué par défaut */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Fond semi-transparent */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 2rem;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 0.5rem;
+}
+
+.modal-text {
+    margin-top: 1rem;
+    color: #444; 
+    font-size: 1.4rem; 
+    text-align: justify; 
+    padding: 0.5rem; 
+}
+
+.modal img {
+    width: 100%; /* S'adapte à la largeur du modal */
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
 
 
 /* Ajouter des requêtes de media pour la réactivité */
@@ -401,7 +906,10 @@ img.posterfeu {
     .logo {
         font-size: 22px;
     }
-}
+}    
+
+
+/* --------------------------------------------------------- CARROUSSEL ------------------------------------------------------------ */
 
 
 .carousel {
@@ -447,4 +955,147 @@ img.posterfeu {
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
     z-index: 10;
+}
+
+
+
+
+/* ------------------------------------------------------- FOOTER --------------------------------------------------- */
+
+footer {
+    footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #2e3d61;
+    z-index: 999;
+    width: 100%;
+    color: white;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.3);
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+}
+
+footer.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.contenu-footer {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 10px 10px;
+    gap: 25px;
+    box-sizing: border-box;
+}
+
+
+.bloc {
+    flex: 1 1 22%;
+    min-width: 220px;
+    margin: 0 10px;
+    box-sizing: border-box;
+}
+
+
+.footer-contact h3,
+.footer-portail h3 {
+    font-size: 25px;
+    color: #fff;m
+    margin-bottom: 1px; /* réduit l'espace sous le titre */
+}
+
+footer a{
+    font-weight: 500;
+    font-size: 2.7rem;;
+    text-decoration: none;
+    color: rgb(252, 143, 0);
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer h3, footer h4 {
+    margin-bottom: 1rem;
+    color: white;
+}
+
+footer p {
+    padding: 5 px 10;
+    font-size: 30px;
+}
+
+.footer-entreprise h4 {
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+/* Conteneur UL des logos */
+.li-logo-footer {
+    display: flex;
+    justify-content: center; /*  centre horizontalement */
+    align-items: center;
+    gap: 30px; /*  espace entre les logos */
+    list-style: none;
+    padding: 0;
+    margin: 1rem auto 0 auto; /*  espace au-dessus et centré */
+}
+
+/* Logos eux-mêmes */
+.li-logo-footer li img {
+    width: 70px;  /*  taille réduite */
+    height: 70px;
+    transition: transform 0.2s ease;
+    border: 2px solid white; /* ✅ contour blanc */
+    border-radius: 10px;
+    transition: transform 0.3s ease, border 0.3s ease;
+}
+
+.li-logo-footer li img:hover {
+  transform: scale(1.1); /* petit effet au survol */
+}
+
+
+.footer-logo-img {
+    height: 60px;
+    filter: invert(1); /* pour le rendre blanc si besoin */
+}
+
+/* Mentions légales */
+.mentions {
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+.mentions p,
+.mentions a {
+    font-size: 20px;
+}
+/* -------------- RESPONSIVE FOOTER -------------- */
+
+@media (max-width: 992px) {
+    .bloc {
+        flex: 1 1 45%;
+    }
+}
+
+@media (max-width: 576px) {
+    .bloc {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+    .li-logo-footer {
+        justify-content: center;
+    }
 }

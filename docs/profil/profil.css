@@ -1,14 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-*{
-	padding: 0;
-	margin: 0;
-	font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-	font-weight: 300;
+/* Reset les marges et les paddings par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
-body{
-    background-color: #8d9fa2;
+/* Corps de la page */
+body {
+    height: 100vh;
+    background-color: #3d3b3b;
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px; /* Hauteur du header */
 }
 
 section.contenu{
@@ -25,48 +34,305 @@ div.navigation{
     margin: 0 0 20px 0;
 }
 
-nav{
-    width: 65%;
-    margin: 15px 0;
-}
 
-ul{
+li {
     list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+
+a:hover {
+    color: #0b8297;
+}
+
+
+/* ------------------------------------------------------------STYLE POUR LE HEADER --------------------------------------------------------- */
+
+
+header {
+    position: fixed; /* Fixe le header en haut */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: transparent; /* par défaut transparent */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
     display: flex;
-    flex-wrap: wrap;
-    padding: 10px;
-    gap: 20px;
-}
-
-li{
-    backdrop-filter: blur(5px);
-    border-radius: 15px;
-    flex:1 0 10%;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    padding: 15px;
-    font-weight: 900;
-    border: 1px solid white;
-    box-sizing: unset;
-    background-color:#0b8297;
+    padding: 0 2rem;
+    background-size: 200% 200%;
 }
 
-li:hover{
-    transition: 0.5s;
+header.scrolled {
+    background-color: rgba(0, 0, 0, 0.85);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+header.scrolled .logo img {
+    opacity: 1; /* affiché après scroll */
+}
+
+.logo img {
+    height: 40px;
+    transition: opacity 0.3s ease;
+    opacity: 0; /* caché par défaut */
+    filter: invert(100%);
+}
+
+.navbar .logo a {
+     font-size: 1.5rem;
+     font-weight: bold;
+}
+
+
+.navbar {
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1200px;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #c7c9d3; /*au survol du btn actif */
     transform: scale(1.10); /* grossit au survol du btn actif */
 }
 
-li:hover a{
-    transition: 0.5s;
-    font-weight: 700;
-    color: #c7c9d3;
+.navbar .burger-menu-button {
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1.5rem;
 }
 
-ul a{
-    font-weight: 500;
-    font-size: 17px;
-    text-decoration: none;
+.buttons { 
+    display: flex;
+    gap: 10px;
+}
+
+.action-button {
+    background-color: #0b8297;
+    color: #000000;
+    border: 1px solid #0b8297;
+    padding: 0.5rem 1.2rem;
+    border-radius: 5px;
+    outline: none;
+    font-size: 0.9 rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.action-button:hover {
+    color: #ffffff;
+    border :1px solid #ffffff;
+}
+
+.contact {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
+
+.contact:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+
+
+/* -------------------------- BURGER MENU -------------------------------------- */
+
+.burger-menu {
+    display: none;
+    height: 0;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px);
+    overflow: hidden;
+    border-radius: 10px;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.burger-menu-button {
+    display: none;
+}
+
+.burger-menu.open {
+    display: block;
+    height: auto; /* Rend le contenu visible */
+}
+
+.burger-menu li {
+    padding: 0.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divider {
+    height: 1px;
+    background-color: #fff;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+}
+
+.burger-menu .action-button {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons-burger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+
+
+/* ---------------------------------- RESPONSIVE NAVBAR ---------------------------------------- */
+
+
+/* Media query pour les écrans plus petits */
+@media (max-width: 990px) {
+    header {
+        background-color: rgba(255, 255, 255, 0.427) !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar .links,
+    .navbar .action-button {
+        display: none;
+    }
+
+    .burger-menu-button { 
+        display: block;
+    }
+
+    .burger-menu-button i {
+        color: black;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+    /* Si ton logo est blanc et doit s’adapter */
+    .logo img {
+        filter: invert(0%);
+    }
+}
+
+@media (max-width: 768px) {
+  nav.active {
+    background-color: white;
+  }
+
+  nav.active a {
+    color: #222;
+  }
+}
+
+
+@media (max-width: 576px) {
+
+    .burger-menu {
+        left: 2rem;
+        width: unset;
+    }
+}
+
+
+/* ----------------------------------------------------- BANNIERE D INTRODUCTION ---------------------------------------------------- */
+
+.page-banner {
+  position: relative;
+  width: 100vw;
+  height: 400px;
+  padding-bottom: 7rem; /* Ajoute assez d’espace sous la bannière */
+  padding-top: 7rem;
+  background: url('images/ta-carte.jpg') center center / cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: visible; /* Permet à la vague absolue de dépasser */
+  margin-bottom: 7rem; /* 👈 ajuste comme tu veux (ex: 50px) */
+}
+
+
+.overlay {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 5rem 2rem;
     color: white;
 }
+
+.page-title {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #ff9100;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    margin-bottom: 1rem;
+}
+
+
+/* Ligne décorative  */
+.banniere-delimitation {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  line-height: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.banniere-delimitation img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ----------------------------------- RESPONSIVE BANNIERE ----------------------------------*/
+
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 2.5rem;
+  }
+
+  .slogan-box .slogan {
+    font-size: 1.2rem;
+  }
+
+  .localisation {
+    font-size: 1rem;
+  }
+}
+
+
 
 
 div.boite{
@@ -91,7 +357,7 @@ div.presentation{
 
 .presentation h1{
     font-size: calc(1rem + 0.45vw);
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 section.titre{
@@ -110,6 +376,7 @@ hr.titre_dessus{
     border: none;
     width: 100%;
     height: 2px;
+    color: rgb(255, 255, 255);
 }
 
 .titre h1{
@@ -117,7 +384,7 @@ hr.titre_dessus{
     font-weight: bold;
     text-align: center;
     padding: 20px 10px;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 
@@ -144,7 +411,7 @@ div.tableau{
 div.tableau h1 {
     font-size: calc(1em + 0.55vw);
     font-weight: bold;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 div.tableau h4 {
@@ -349,4 +616,118 @@ div.item::before {
 
 
 
+
+
+/* ========================================
+   STYLES POUR LA CARTE INTERACTIVE
+   ======================================== */
+
+/* Section de la carte */
+.section-carte {
+    margin: 40px 0;
+    padding: 0 20px;
+}
+
+.section-carte .titre {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-carte .titre h1 {
+    color: #ffffff;
+    font-size: 2.2em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.section-carte .titre hr {
+    width: 200px;
+    height: 3px;
+    background: linear-gradient(90deg, #009999, #00cccc);
+    border: none;
+    margin: 0 auto 20px auto;
+    border-radius: 2px;
+}
+
+/* Conteneur de la carte */
+.carte-container {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+/* La carte elle-même */
+#map-parcours {
+    height: 500px;
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* Styles pour les popups personnalisées */
+.custom-popup .leaflet-popup-content-wrapper {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.custom-popup .leaflet-popup-content {
+    margin: 15px;
+    font-family: 'Arial', sans-serif;
+}
+
+.custom-popup .leaflet-popup-tip {
+    background: #667eea;
+}
+
+.popup-title {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    border-bottom: 2px solid rgba(255,255,255,0.3);
+    padding-bottom: 8px;
+}
+
+.popup-content {
+    font-size: 1em;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+.popup-link {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+.popup-link:hover {
+    background: rgba(255,255,255,0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #map-parcours {
+        height: 400px;
+    }
+    
+    .section-carte {
+        padding: 0 10px;
+    }
+    
+    .section-carte .titre h1 {
+        font-size: 1.8em;
+    }
+}
 

@@ -3,24 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="profiltest.css">
+    <link rel="stylesheet" href="profil.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="shortcut icon" href="../contenu/head.png" type="image/x-icon">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""/>
     <title>Portfolio - Profil</title>
 </head>
 <body>
-    <section class="contenu">
-        <div class="navigation">
-            <nav id="nav">
-                <div id="icons"></div>
-                <div class="background"></div>
-                <ul>
-                    <li><a href="../index.html">MENU</a></li>
-                    <li><a href="./profil.html">PROFIL</a></li>
-                    <li><a href="../compétences/competences.html">COMPETENCES</a></li>
-                </ul>
-            </nav>
+
+    <header>
+
+        <div class="navbar">
+		    <div class="logo">
+                <a href="#">
+                <img id="scroll-logo" src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png" alt="Logo"/>
+                </a>
+            </div>
+		    <ul class="links">
+                <li><a href="../index.html" aria-current="page"> 🏠︎ Accueil</a></li>
+                <li><a href="lien vers une page des services">Services</a></li>
+                <li><a href="travaux/travaux.html"> Portfolio</a></li>
+                <li><a href="profil/profil.html">Profil</a></li>
+                <li><a href="compétences/competences.html">Compétences</a></li>
+            </ul>					
+		    <div class="buttons">
+                <a target="_blank" href="lien vers une page contact" class="action-button contact"> Contact</a>
+                <a target="_blank" href="lien client login compte" class="action-button connection"> Mon Portail</a>
+            </div>
+		    <div class="burger-menu-button">			
+                <i class="fa-solid fa-bars"></i>
+		    </div>
         </div>
+
+        <div class="burger-menu">
+        	<ul class="links">
+                <li><a href="../index.html" aria-current="page">Accueil</a></li>
+                <li><a href="lien vers une page des services">Services</a></li>
+                <li><a href="travaux/travaux.html"> Portfolio</a></li>
+                <li><a href="profil/profil.html">Profil</a></li>
+                <li><a href="compétences/competences.html">Compétences</a></li>
+                <div class="divider"></div>
+                <div class="buttons-burger-menu">
+                    <a target="_blank" href="contact/contactezmoi.html" class="action-button contact"> Contact</a>
+                    <a target="_blank" href="lien client login compte" class="action-button connection"> Mon Portail</a>
+                </div>
+            </ul>	
+        </div>
+        
+	</header>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const burgerMenuButton = document.querySelector('.burger-menu-button');
+    const burgerMenuButtonIcon = document.querySelector('.burger-menu-button i');
+    const burgerMenu = document.querySelector('.burger-menu');
+    const header = document.querySelector('header');
+
+    burgerMenuButton.onclick = function () {
+        burgerMenu.classList.toggle('open');
+        const isOpen = burgerMenu.classList.contains('open');
+        burgerMenuButtonIcon.className = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+    };
+
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+        });
+    });
+    </script>
+
+    <main>
+
+        <!---------------------------------Bannière d'introduction--------------------------->
+
+        <section class="page-banner"> 
+            <div class="overlay">
+                <h1 class="page-title">Profil</h1>
+            </div>
+
+            <!-- Délimitation fine décorative -->
+            <span class="banniere-delimitation">
+                <img src="/docs/img/dessin-banniere-delimitation.svg" alt="">
+            </span>
+        </section>
+
+    <section class="contenu">
         <div class="boite">
             <section class="titre">
                 <hr class="titre_dessus">
@@ -30,6 +103,21 @@
             <div class="presentation">
                 <h1>Je m'appelle Théo Bucaille et je suis originaire de Deauville.</h1>
             </div>
+            
+
+            <!-- NOUVELLE SECTION CARTE -->
+            <section class="section-carte">
+                <div class="titre">
+                    <hr class="titre_dessus">
+                    <h1>🗺️ Cartographie interactive de mon parcours</h1>
+                </div>
+                
+                <div class="carte-container">
+                    <div id="map-parcours"></div>
+                </div>
+            </section>
+            <!-- FIN SECTION CARTE -->
+
 
             <section class="titre">
                 <hr class="titre_dessus">
@@ -91,5 +179,13 @@
     </section>
     <script src="script.js"></script>
     <script>AOS.init();</script>
+     <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
+    <script src="script.profil.js"></script> <!-- Script de la carte -->
+    <script src="script.js"></script>
+    <script>AOS.init();</script>
+    </main>
 </body>
 </html>

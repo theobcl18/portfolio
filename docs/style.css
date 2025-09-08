@@ -33,6 +33,21 @@ html {
 }
 
 
+html {
+    font-size: 65%;
+}
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+
 li {
     list-style: none;
 }
@@ -47,7 +62,10 @@ a:hover {
     color: #0b8297;
 }
 
-/* Style pour le header */
+
+/* ------------------------------------------------------------STYLE POUR LE HEADER --------------------------------------------------------- */
+
+
 header {
     position: fixed; /* Fixe le header en haut */
     top: 0;
@@ -213,7 +231,8 @@ header.scrolled .logo img {
 /* Media query pour les écrans plus petits */
 @media (max-width: 990px) {
     header {
-        background: none;
+        background-color: rgba(255, 255, 255, 0.427) !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
 
     .navbar .links,
@@ -225,10 +244,29 @@ header.scrolled .logo img {
         display: block;
     }
 
+    .burger-menu-button i {
+        color: black;
+    }
+
     .burger-menu {
         display: block;
     }
+    /* Si ton logo est blanc et doit s’adapter */
+    .logo img {
+        filter: invert(0%);
+    }
 }
+
+@media (max-width: 768px) {
+  nav.active {
+    background-color: white;
+  }
+
+  nav.active a {
+    color: #222;
+  }
+}
+
 
 @media (max-width: 576px) {
 
@@ -293,21 +331,7 @@ div.profile-container{
 } */
 
 
-
-
-html {
-    font-size: 65%;
-}
-*, *::after, *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-*, *::after, *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} 
+/* ------------------------------------------------------------ MAIN --------------------------------------------------------------- */
 
 
 main {
@@ -397,19 +421,21 @@ img {
 }*/ 
 
 
-/* ---------------------------------------Bannière d'introduction----------------------------------------- */
+/* ----------------------------------------------------- BANNIERE D INTRODUCTION ---------------------------------------------------- */
 
 .page-banner {
   position: relative;
   width: 100vw;
   height: 400px;
-  padding-bottom: 60px; /* Ajoute assez d’espace sous la bannière */
+  padding-bottom: 7rem; /* Ajoute assez d’espace sous la bannière */
+  padding-top: 7rem;
   background: url('images/ta-carte.jpg') center center / cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: visible; /* Permet à la vague absolue de dépasser */
+  margin-bottom: 7rem; /* 👈 ajuste comme tu veux (ex: 50px) */
 }
 
 
@@ -487,7 +513,7 @@ img {
   }
 }
 
-/* -------------------------------------Section Portfolio -----------------------------------------------------*/
+/* -------------------------------------------------------------------- SECTION PORTFOLIO ------------------------------------------------------------------*/
 
 .portfolio {
     border: 2px solid #484e5e; /* Pour voir les limites visuelles */
@@ -702,7 +728,7 @@ img.posterfeu {
 
 
 
-/* Modal Styles */
+/* ---------------------------------- Modal Styles --------------------------------------- */
 .modal {
     display: none; /* Masqué par défaut */
     position: fixed;
@@ -883,6 +909,9 @@ img.posterfeu {
 }    
 
 
+/* --------------------------------------------------------- CARROUSSEL ------------------------------------------------------------ */
+
+
 .carousel {
     position: relative;
     width: 100%;
@@ -931,7 +960,7 @@ img.posterfeu {
 
 
 
-/* ----------------------------------------FOOTER--------------------------------------------------- */
+/* ------------------------------------------------------- FOOTER --------------------------------------------------- */
 
 footer {
     footer {
