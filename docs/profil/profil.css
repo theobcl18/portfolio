@@ -495,7 +495,7 @@ div.item:hover h4 {
     pointer-events: auto;
 }
 
-div.item::before {
+/* div.item::before {
     content: '';
     position: absolute;
     width: 12px;
@@ -506,7 +506,7 @@ div.item::before {
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
-}
+} */
 
 .background{
     position: absolute;

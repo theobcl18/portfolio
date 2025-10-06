@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en"> 
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="services.css">
+    <title>Portfolio de Théo Bucaille</title>
+</head>
+
+<body>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&amp;display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  -->
+
+    <header> 
+        <!-- <nav class="nav-links"> ajouter ce bloc a contact
+            <a href="https://www.linkedin.com/in/th%C3%A9o-bucaille/" target="_blank" class="btn">LinkedIn</a>
+            <a href="CV MASTER.pdf" target="_blank" class="btn">À propos (CV)</a>
+            <a href="mailto:gtbe189@gmail.com" target="_blank" class="btn">Me contacter </a>
+        </nav> --> 
+        <div class="navbar">
+		    <div class="logo">
+                <a href="#">
+                <img id="scroll-logo" src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png" alt="Logo"/>
+                </a>
+            </div>
+		    <ul class="links">
+                <li><a href="lien site direct" aria-current="page"> 🏠︎ Accueil</a></li>
+                <li><a href="services/services.html">Services</a></li>
+                <li><a href="travaux/travaux.html"> Portfolio</a></li>
+                <li><a href="profil/profil.html">Profil</a></li>
+                <li><a href="compétences/competences.html">Compétences</a></li>
+            </ul>					
+		    <div class="buttons">
+                <a target="_blank" href="lien vers une page contact" class="action-button contact"> Contact</a>
+                <a target="_blank" href="lien client login compte" class="action-button connection"> Mon Portail</a>
+            </div>
+		    <div class="burger-menu-button">			
+                <i class="fa-solid fa-bars"></i>
+		    </div>
+        </div>
+
+        <div class="burger-menu">
+        	<ul class="links">
+                <li><a href="lien site direct" aria-current="page">Accueil</a></li>
+                <li><a href="lien vers une page des services">Services</a></li>
+                <li><a href="travaux/travaux.html"> Portfolio</a></li>
+                <li><a href="profil/profil.html">Profil</a></li>
+                <li><a href="compétences/competences.html">Compétences</a></li>
+                <div class="divider"></div>
+                <div class="buttons-burger-menu">
+                    <a target="_blank" href="contact/contactezmoi.html" class="action-button contact"> Contact</a>
+                    <a target="_blank" href="lien client login compte" class="action-button connection"> Mon Portail</a>
+                </div>
+            </ul>	
+        </div>
+        
+	</header>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const burgerMenuButton = document.querySelector('.burger-menu-button');
+    const burgerMenuButtonIcon = document.querySelector('.burger-menu-button i');
+    const burgerMenu = document.querySelector('.burger-menu');
+    const header = document.querySelector('header');
+
+    burgerMenuButton.onclick = function () {
+        burgerMenu.classList.toggle('open');
+        const isOpen = burgerMenu.classList.contains('open');
+        burgerMenuButtonIcon.className = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+    };
+
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+        });
+    });
+    </script>
+
+<!--------------------------------------------------------MAIN------------------------------------------------------------------->
+    <main>
+
+        <!---------------------------------Bannière d'introduction--------------------------->
+
+        <section class="page-banner"> 
+            <div class="overlay">
+                <h1 class="page-title"> Les services</h1>
+                <div class="slogan-box">
+                <p class="slogan"> Cartographie et systèmes d'information géographique</p>
+                </div>
+                <p class="localisation"> en Normandie et ses alentours</p>
+            </div>
+
+            <!-- Délimitation fine décorative -->
+            <span class="banniere-delimitation">
+                <img src="/docs/img/dessin-banniere-delimitation.svg" alt="">
+            </span>
+        </section>
