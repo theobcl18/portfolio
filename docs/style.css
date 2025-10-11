@@ -581,16 +581,16 @@ input:hover{
 /* Liste des éléments du portfolio */
 .portfolio-items {
     display: grid;
-    grid-template-columns: 1fr; /* Une seule colonne par défaut */
+    grid-template-columns: 1fr; /* Une seule colonne */
     gap: 0.5rem; /* Espacement entre les éléments */
-    /*overflow: hidden; /* Défilement */
-    /* padding-bottom: 10px; /* Espacement au bas pour éviter que les éléments soient collés */
-    /*max-width: 100%; /* Utiliser toute la largeur disponible */
-    /* height: 80vh; /* Ajuster la hauteur de la section des éléments du portfolio */
-    width: 100%; /* S'assure que la grille respecte les limites */
-    box-sizing: border-box; /* Pour éviter que les paddings ajoutent de la largeur */
-    overflow: hidden; /* Empêche le débordement visuel */
+    width: 100%; /* Utilise toute la largeur */
+    box-sizing: border-box; /* Évite les débordements */
+    overflow-y: auto; /* Active le défilement vertical */
+    overflow-x: hidden; /* Pas de défilement horizontal */
+    max-height: 80vh; /* Hauteur visible avant défilement (ajuste selon ton besoin) */
+    padding-right: 0.5rem; /* Petit espace pour éviter que le scroll cache le contenu */
 }
+
 
 
 
@@ -874,7 +874,7 @@ img.posterfeu {
     }
     
     .portfolio-items {
-        grid-template-cons: repeat(auto-fit, minmax(350px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         gap: 30px;
         height: auto;
     }
@@ -994,7 +994,7 @@ footer.visible {
 .footer-contact h3,
 .footer-portail h3 {
     font-size: 25px;
-    color: #fff;m
+    color: #fff;
     margin-bottom: 1px; /* réduit l'espace sous le titre */
 }
 
