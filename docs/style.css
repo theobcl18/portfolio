@@ -420,7 +420,7 @@ ul a{
   justify-content: center;
   align-items: center;
   overflow: visible; /* Permet à la vague absolue de dépasser */
-  margin-bottom: 7rem; /* 👈 ajuste comme tu veux (ex: 50px) */
+  margin-bottom: 7rem;
 }
 
 
@@ -466,7 +466,7 @@ ul a{
 
 /* Ligne décorative  */
 .banniere-delimitation {
-  position: absolute;
+  position: relative;
   bottom: 0;
   left: 0;
   width: 100%;
